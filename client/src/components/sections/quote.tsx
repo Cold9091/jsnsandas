@@ -2,7 +2,9 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
-import { MessageSquare } from "lucide-react";
+import { MessageSquare, CheckCircle } from "lucide-react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -39,6 +41,11 @@ type FormData = z.infer<typeof formSchema>;
 export default function Quote() {
   const { toast } = useToast();
   const [isSubmitted, setIsSubmitted] = useState(false);
+  
+  const [ref, inView] = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -88,50 +95,117 @@ export default function Quote() {
   ];
 
   return (
-    <section id="quote" className="py-20 px-4 bg-black/10">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light mb-6 tracking-tight">
+    <section 
+      id="quote" 
+      className="py-32 px-6"
+      style={{
+        background: 'rgba(0, 0, 0, 0.05)',
+        backdropFilter: 'blur(10px)'
+      }}
+    >
+      <div className="max-w-5xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
+          transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="text-center mb-20"
+        >
+          <h2 
+            className="apple-headline mb-6"
+            style={{ fontSize: 'clamp(40px, 6vw, 64px)' }}
+          >
             Solicite seu Orçamento
           </h2>
-          <div className="w-20 h-1 bg-white mx-auto rounded-full"></div>
-          <p className="text-lg font-light mt-6 opacity-90">
+          <motion.div
+            initial={{ width: 0 }}
+            animate={inView ? { width: 80 } : { width: 0 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="h-1 bg-white mx-auto rounded-full"
+          />
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+            className="apple-subheadline mt-8"
+          >
             Entre em contacto connosco para receber um orçamento personalizado
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
-        <div className="glass-effect rounded-3xl p-8 md:p-12">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 40, scale: 0.95 }}
+          animate={inView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 40, scale: 0.95 }}
+          transition={{ delay: 0.4, duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="apple-glass rounded-3xl p-10 md:p-16"
+        >
           {isSubmitted ? (
-            <div className="text-center py-12">
-              <MessageSquare className="h-16 w-16 mx-auto mb-6 opacity-80" />
-              <h3 className="text-2xl font-semibold mb-4">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+              className="text-center py-16"
+            >
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 0.2, duration: 0.5, type: "spring" }}
+              >
+                <CheckCircle className="h-20 w-20 mx-auto mb-8 text-green-400" />
+              </motion.div>
+              <h3 
+                className="text-3xl font-semibold mb-6"
+                style={{
+                  fontSize: '32px',
+                  fontWeight: 600,
+                  letterSpacing: '-0.022em'
+                }}
+              >
                 Orçamento enviado com sucesso!
               </h3>
-              <p className="font-light opacity-90 mb-6">
+              <p 
+                className="apple-body mb-10 max-w-2xl mx-auto"
+                style={{
+                  fontSize: '19px',
+                  lineHeight: 1.42,
+                  letterSpacing: '-0.022em'
+                }}
+              >
                 Recebemos a sua solicitação e entraremos em contacto em breve.
               </p>
-              <Button
+              <motion.button
                 onClick={() => setIsSubmitted(false)}
-                className="btn-primary"
+                className="apple-button-primary"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 Enviar outro orçamento
-              </Button>
-            </div>
+              </motion.button>
+            </motion.div>
           ) : (
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <FormField
                     control={form.control}
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-white">Nome Completo</FormLabel>
+                        <FormLabel 
+                          className="text-white text-lg font-medium"
+                          style={{
+                            fontSize: '17px',
+                            fontWeight: 500,
+                            letterSpacing: '-0.022em'
+                          }}
+                        >
+                          Nome Completo
+                        </FormLabel>
                         <FormControl>
                           <Input
                             {...field}
                             placeholder="Seu nome completo"
-                            className="form-input"
+                            className="apple-input"
                           />
                         </FormControl>
                         <FormMessage />
@@ -144,12 +218,21 @@ export default function Quote() {
                     name="phone"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-white">Telefone</FormLabel>
+                        <FormLabel 
+                          className="text-white text-lg font-medium"
+                          style={{
+                            fontSize: '17px',
+                            fontWeight: 500,
+                            letterSpacing: '-0.022em'
+                          }}
+                        >
+                          Telefone
+                        </FormLabel>
                         <FormControl>
                           <Input
                             {...field}
                             placeholder="+244 xxx xxx xxx"
-                            className="form-input"
+                            className="apple-input"
                           />
                         </FormControl>
                         <FormMessage />
@@ -158,19 +241,28 @@ export default function Quote() {
                   />
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <FormField
                     control={form.control}
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-white">Email</FormLabel>
+                        <FormLabel 
+                          className="text-white text-lg font-medium"
+                          style={{
+                            fontSize: '17px',
+                            fontWeight: 500,
+                            letterSpacing: '-0.022em'
+                          }}
+                        >
+                          Email
+                        </FormLabel>
                         <FormControl>
                           <Input
                             {...field}
                             type="email"
                             placeholder="seu@email.com"
-                            className="form-input"
+                            className="apple-input"
                           />
                         </FormControl>
                         <FormMessage />
@@ -183,14 +275,23 @@ export default function Quote() {
                     name="service"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-white">Serviço Desejado</FormLabel>
+                        <FormLabel 
+                          className="text-white text-lg font-medium"
+                          style={{
+                            fontSize: '17px',
+                            fontWeight: 500,
+                            letterSpacing: '-0.022em'
+                          }}
+                        >
+                          Serviço Desejado
+                        </FormLabel>
                         <Select onValueChange={field.onChange} value={field.value}>
                           <FormControl>
-                            <SelectTrigger className="form-select">
+                            <SelectTrigger className="apple-select">
                               <SelectValue placeholder="Selecione um serviço" />
                             </SelectTrigger>
                           </FormControl>
-                          <SelectContent className="bg-[var(--jsn-primary-dark)] text-white border-white/20">
+                          <SelectContent className="bg-[var(--jsn-accent)] text-white border-white/20">
                             {services.map((service) => (
                               <SelectItem
                                 key={service.value}
@@ -213,12 +314,21 @@ export default function Quote() {
                   name="location"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-white">Local</FormLabel>
+                      <FormLabel 
+                        className="text-white text-lg font-medium"
+                        style={{
+                          fontSize: '17px',
+                          fontWeight: 500,
+                          letterSpacing: '-0.022em'
+                        }}
+                      >
+                        Local
+                      </FormLabel>
                       <FormControl>
                         <Input
                           {...field}
                           placeholder="Endereço ou localização do serviço"
-                          className="form-input"
+                          className="apple-input"
                         />
                       </FormControl>
                       <FormMessage />
@@ -231,13 +341,21 @@ export default function Quote() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-white">Mensagem</FormLabel>
+                      <FormLabel 
+                        className="text-white text-lg font-medium"
+                        style={{
+                          fontSize: '17px',
+                          fontWeight: 500,
+                          letterSpacing: '-0.022em'
+                        }}
+                      >
+                        Mensagem
+                      </FormLabel>
                       <FormControl>
                         <Textarea
                           {...field}
                           placeholder="Descreva detalhes do serviço necessário..."
-                          className="form-input resize-none"
-                          rows={4}
+                          className="apple-textarea"
                         />
                       </FormControl>
                       <FormMessage />
@@ -245,27 +363,31 @@ export default function Quote() {
                   )}
                 />
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                  <Button
+                <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
+                  <motion.button
                     type="submit"
                     disabled={submitQuote.isPending}
-                    className="btn-primary"
+                    className="apple-button-primary"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                   >
                     {submitQuote.isPending ? "Enviando..." : "Enviar Orçamento"}
-                  </Button>
-                  <Button
+                  </motion.button>
+                  <motion.button
                     type="button"
                     onClick={() => window.open("https://wa.me/244939103175", "_blank")}
-                    className="btn-secondary"
+                    className="apple-button-secondary flex items-center justify-center"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                   >
                     <MessageSquare className="mr-2 h-5 w-5" />
                     WhatsApp
-                  </Button>
+                  </motion.button>
                 </div>
               </form>
             </Form>
           )}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

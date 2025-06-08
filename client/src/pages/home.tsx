@@ -7,10 +7,12 @@ import Quote from "@/components/sections/quote";
 import Contact from "@/components/sections/contact";
 import Footer from "@/components/sections/footer";
 import WhatsAppFloat from "@/components/whatsapp-float";
+import SmoothScroll from "@/components/smooth-scroll";
 
 export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden">
+      <SmoothScroll />
       <Navigation />
       <Hero />
       <About />
