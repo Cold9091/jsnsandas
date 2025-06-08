@@ -1,59 +1,154 @@
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import { scrollToSection } from "@/lib/utils";
 
 export default function Hero() {
+  const [ref, inView] = useInView({
+    threshold: 0.3,
+    triggerOnce: true,
+  });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+        duration: 0.8,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 60 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1.2,
+        ease: [0.25, 0.46, 0.45, 0.94],
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 40, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.8,
+        ease: [0.25, 0.46, 0.45, 0.94],
+      },
+    },
+  };
+
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center px-4 pt-16"
+      className="min-h-screen flex items-center justify-center px-6 pt-20"
+      style={{ paddingTop: '120px' }}
     >
-      <div className="max-w-4xl mx-auto text-center animate-fade-in">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-light leading-tight mb-6 tracking-tight">
+      <motion.div
+        ref={ref}
+        variants={containerVariants}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        className="max-w-5xl mx-auto text-center"
+      >
+        <motion.h1
+          variants={itemVariants}
+          className="apple-headline mb-8"
+        >
           Cuidando do seu espaço
           <br />
-          <span className="font-medium">com segurança e profissionalismo</span>
-        </h1>
-        <p className="text-xl md:text-2xl font-light mb-12 opacity-90 max-w-3xl mx-auto leading-relaxed">
+          <span style={{ fontWeight: 700 }}>com segurança e profissionalismo</span>
+        </motion.h1>
+        
+        <motion.p
+          variants={itemVariants}
+          className="apple-subheadline mb-16 max-w-4xl mx-auto"
+        >
           Soluções em desinfestação, limpeza e controle de pragas para sua casa
           ou empresa.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button
+        </motion.p>
+        
+        <motion.div
+          variants={itemVariants}
+          className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-24"
+        >
+          <motion.button
             onClick={() => scrollToSection("services")}
-            className="btn-primary"
+            className="apple-button-primary"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             Conheça nossos serviços
-          </button>
-          <button
+          </motion.button>
+          <motion.button
             onClick={() => scrollToSection("quote")}
-            className="btn-secondary"
+            className="apple-button-secondary"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             Solicite um orçamento
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
 
-        {/* Quick highlights */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 animate-slide-up">
-          <div className="text-center p-6 glass-effect rounded-2xl">
-            <h3 className="font-semibold text-lg mb-2">Missão</h3>
-            <p className="font-light opacity-90">
-              Proteger o meio ambiente e os espaços afetados por infestações
-            </p>
-          </div>
-          <div className="text-center p-6 glass-effect rounded-2xl">
-            <h3 className="font-semibold text-lg mb-2">Visão</h3>
-            <p className="font-light opacity-90">
-              Tornar-se referência em serviços de desinfestação em Angola
-            </p>
-          </div>
-          <div className="text-center p-6 glass-effect rounded-2xl">
-            <h3 className="font-semibold text-lg mb-2">Valores</h3>
-            <p className="font-light opacity-90">
-              Ética, responsabilidade social, excelência e relacionamento com a
-              comunidade
-            </p>
-          </div>
-        </div>
-      </div>
+        {/* Mission, Vision, Values Cards */}
+        <motion.div
+          variants={containerVariants}
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+        >
+          {[
+            {
+              title: "Missão",
+              description: "Proteger o meio ambiente e os espaços afetados por infestações com soluções sustentáveis"
+            },
+            {
+              title: "Visão", 
+              description: "Tornar-se referência em serviços de desinfestação em Angola"
+            },
+            {
+              title: "Valores",
+              description: "Ética, responsabilidade social, excelência e relacionamento duradouro com a comunidade"
+            }
+          ].map((item, index) => (
+            <motion.div
+              key={item.title}
+              variants={cardVariants}
+              custom={index}
+              className="apple-glass rounded-3xl p-8 text-center hover:scale-105 transition-transform duration-500"
+              whileHover={{ 
+                y: -8,
+                transition: { duration: 0.3 }
+              }}
+            >
+              <h3 
+                className="text-xl font-semibold mb-4"
+                style={{
+                  fontSize: '21px',
+                  fontWeight: 600,
+                  letterSpacing: '-0.022em'
+                }}
+              >
+                {item.title}
+              </h3>
+              <p 
+                className="apple-body text-center"
+                style={{
+                  fontSize: '17px',
+                  lineHeight: 1.47,
+                  letterSpacing: '-0.022em'
+                }}
+              >
+                {item.description}
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
