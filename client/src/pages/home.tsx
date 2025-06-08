@@ -9,7 +9,7 @@ import Areas from "@/components/sections/areas";
 import Stats from "@/components/sections/stats";
 import Testimonials from "@/components/sections/testimonials";
 import Gallery from "@/components/sections/gallery";
-import Certifications from "@/components/sections/certifications";
+
 import FAQ from "@/components/sections/faq";
 import Quote from "@/components/sections/quote";
 import Contact from "@/components/sections/contact";
@@ -41,7 +41,6 @@ export default function Home() {
       <Stats />
       <Testimonials />
       <Gallery />
-      <Certifications />
       <FAQ />
       <Quote />
       <Contact />
