@@ -59,7 +59,7 @@ export default function Hero() {
       >
         <motion.h1
           variants={itemVariants}
-          className="apple-headline mb-8"
+          className="apple-headline apple-gradient-text mb-8"
         >
           Cuidando do seu espaço
           <br />
@@ -80,7 +80,7 @@ export default function Hero() {
         >
           <motion.button
             onClick={() => scrollToSection("services")}
-            className="apple-button-primary"
+            className="apple-button-primary apple-button-enhanced apple-hover-lift"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -88,7 +88,7 @@ export default function Hero() {
           </motion.button>
           <motion.button
             onClick={() => scrollToSection("quote")}
-            className="apple-button-secondary"
+            className="apple-button-secondary apple-button-enhanced apple-hover-lift"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -119,7 +119,8 @@ export default function Hero() {
               key={item.title}
               variants={cardVariants}
               custom={index}
-              className="apple-glass rounded-3xl p-8 text-center hover:scale-105 transition-transform duration-500"
+              className="apple-glass rounded-3xl p-8 text-center apple-hover-lift apple-float"
+              style={{ animationDelay: `${index * 0.5}s` }}
               whileHover={{ 
                 y: -8,
                 transition: { duration: 0.3 }
