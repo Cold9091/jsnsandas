@@ -74,7 +74,7 @@ export default function Areas() {
             className="apple-headline mb-6"
             style={{ fontSize: 'clamp(40px, 6vw, 64px)' }}
           >
-            Áreas de Atuação
+            Desinfestação em Toda Luanda
           </h2>
           <motion.div
             initial={{ width: 0 }}

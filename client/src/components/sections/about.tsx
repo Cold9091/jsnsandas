@@ -6,7 +6,7 @@ export default function About() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light mb-6 tracking-tight">
-            Quem Somos
+            JSN SANDA - Empresa de Desinfestação em Luanda
           </h2>
           <div className="w-20 h-1 bg-white mx-auto rounded-full"></div>
         </div>
@@ -14,16 +14,14 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg font-light leading-relaxed opacity-90">
-              A JSN SANDA é uma empresa especializada em serviços de
-              desinfestação, desinfecção, limpeza e controle de pragas,
-              comprometida em oferecer soluções eficazes e seguras para proteger
-              seus espaços.
+              A JSN SANDA é líder em desinfestação profissional em Angola, especializada em 
+              controle de pragas, desratização e desinfecção em Luanda e região metropolitana. 
+              Atendemos residências, empresas e indústrias com soluções seguras e eficazes.
             </p>
             <p className="text-lg font-light leading-relaxed opacity-90">
-              Com uma equipe altamente qualificada e equipamentos de última
-              geração, garantimos resultados excepcionais em todos os nossos
-              serviços, sempre priorizando a segurança e o bem-estar dos nossos
-              clientes.
+              Nossa equipe certificada utiliza equipamentos modernos e produtos aprovados para 
+              eliminação de baratas, ratos, cupins, formigas e demais pragas urbanas. Garantimos 
+              resultados duradouros com atendimento 24 horas em toda Luanda.
             </p>
           </div>
 

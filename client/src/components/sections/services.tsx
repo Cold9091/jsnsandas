@@ -105,7 +105,7 @@ export default function Services() {
             className="apple-headline mb-6"
             style={{ fontSize: 'clamp(40px, 6vw, 64px)' }}
           >
-            Nossos Serviços
+            Serviços de Desinfestação em Angola
           </h2>
           <motion.div
             initial={{ width: 0 }}

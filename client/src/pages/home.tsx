@@ -19,6 +19,7 @@ import SmoothScroll from "@/components/smooth-scroll";
 import ScrollProgress from "@/components/scroll-progress";
 import BackToTop from "@/components/back-to-top";
 import LoadingScreen from "@/components/sections/loading-screen";
+import SEOHead from "@/components/seo-head";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -29,6 +30,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen overflow-x-hidden apple-particles">
+      <SEOHead />
       <ScrollProgress />
       <SmoothScroll />
       <Navigation />

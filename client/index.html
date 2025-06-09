@@ -79,6 +79,65 @@
     <link rel="alternate" hreflang="pt" href="https://jsnsanda.com/" />
     <link rel="alternate" hreflang="x-default" href="https://jsnsanda.com/" />
     
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: 'JSN SANDA - Desinfestação Profissional em Luanda',
+        page_location: 'https://jsnsanda.com/',
+        content_group1: 'Desinfestação Angola',
+        content_group2: 'Controle Pragas Luanda',
+        custom_map: {
+          'custom_parameter_1': 'business_type',
+          'custom_parameter_2': 'service_area'
+        },
+        business_type: 'pest_control',
+        service_area: 'luanda_angola'
+      });
+      
+      // Enhanced ecommerce tracking for quote requests
+      gtag('config', 'GA_MEASUREMENT_ID', {
+        enhanced_ecommerce: true
+      });
+      
+      // Custom events for SEO tracking
+      function trackQuoteRequest() {
+        gtag('event', 'quote_request', {
+          event_category: 'lead_generation',
+          event_label: 'desinfestacao_orcamento',
+          value: 1
+        });
+      }
+      
+      function trackServiceView(service) {
+        gtag('event', 'service_view', {
+          event_category: 'engagement',
+          event_label: service,
+          service_type: service
+        });
+      }
+      
+      function trackPhoneCall() {
+        gtag('event', 'phone_call', {
+          event_category: 'contact',
+          event_label: 'phone_click',
+          value: 1
+        });
+      }
+    </script>
+    
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="GOOGLE_SEARCH_CONSOLE_CODE" />
+    
+    <!-- Bing Webmaster Tools -->
+    <meta name="msvalidate.01" content="BING_WEBMASTER_CODE" />
+    
+    <!-- Yandex Verification -->
+    <meta name="yandex-verification" content="YANDEX_VERIFICATION_CODE" />
+    
     <!-- Structured Data -->
     <script type="application/ld+json">
     [
