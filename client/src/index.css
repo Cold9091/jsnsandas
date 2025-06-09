@@ -25,19 +25,21 @@
   --ring: hsl(20, 14.3%, 4.1%);
   --radius: 0.5rem;
 
-  /* JSN SANDA - Apple Inspired Colors */
-  --jsn-primary: #ebbb04;
-  --jsn-primary-rgb: 235, 187, 4;
-  --jsn-secondary: #f5d042;
-  --jsn-accent: #d4a503;
+  /* JSN SANDA - Refined Color Palette */
+  --jsn-primary: #d4a503;
+  --jsn-primary-light: #e6c147;
+  --jsn-secondary: #f0d670;
+  --jsn-accent: #b8910a;
+  --jsn-dark: #2c2416;
   --jsn-text: #ffffff;
-  --jsn-text-secondary: rgba(255, 255, 255, 0.8);
-  --jsn-text-muted: rgba(255, 255, 255, 0.6);
-  --jsn-glass: rgba(255, 255, 255, 0.08);
-  --jsn-glass-border: rgba(255, 255, 255, 0.12);
-  --jsn-glass-hover: rgba(255, 255, 255, 0.15);
-  --jsn-shadow: rgba(0, 0, 0, 0.15);
-  --jsn-shadow-lg: rgba(0, 0, 0, 0.25);
+  --jsn-text-warm: #fef9e7;
+  --jsn-text-secondary: rgba(254, 249, 231, 0.85);
+  --jsn-text-muted: rgba(254, 249, 231, 0.65);
+  --jsn-glass: rgba(254, 249, 231, 0.12);
+  --jsn-glass-border: rgba(254, 249, 231, 0.18);
+  --jsn-glass-hover: rgba(254, 249, 231, 0.22);
+  --jsn-shadow: rgba(44, 36, 22, 0.25);
+  --jsn-shadow-lg: rgba(44, 36, 22, 0.4);
 }
 
 .dark {
@@ -76,9 +78,15 @@
   body {
     @apply antialiased;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background: linear-gradient(135deg, var(--jsn-primary) 0%, var(--jsn-secondary) 50%, var(--jsn-accent) 100%);
+    background: linear-gradient(135deg, 
+      var(--jsn-accent) 0%, 
+      var(--jsn-primary) 25%, 
+      var(--jsn-primary-light) 50%, 
+      var(--jsn-secondary) 75%, 
+      var(--jsn-primary-light) 100%
+    );
     background-attachment: fixed;
-    color: var(--jsn-text);
+    color: var(--jsn-text-warm);
     min-height: 100vh;
     overflow-x: hidden;
     letter-spacing: -0.011em;
@@ -133,8 +141,8 @@
 
   /* Apple button styles */
   .apple-button-primary {
-    background: var(--jsn-text);
-    color: var(--jsn-primary);
+    background: var(--jsn-text-warm);
+    color: var(--jsn-dark);
     border-radius: 980px;
     font-weight: 500;
     font-size: 17px;
@@ -142,20 +150,20 @@
     letter-spacing: -0.022em;
     padding: 12px 24px;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 16px var(--jsn-shadow);
     border: none;
   }
 
   .apple-button-primary:hover {
     transform: translateY(-1px) scale(1.02);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 32px var(--jsn-shadow-lg);
+    background: #ffffff;
   }
 
   .apple-button-secondary {
     background: transparent;
-    color: var(--jsn-text);
-    border: 2px solid var(--jsn-text);
+    color: var(--jsn-text-warm);
+    border: 2px solid var(--jsn-text-warm);
     border-radius: 980px;
     font-weight: 500;
     font-size: 17px;
@@ -166,10 +174,10 @@
   }
 
   .apple-button-secondary:hover {
-    background: var(--jsn-text);
-    color: var(--jsn-primary);
+    background: var(--jsn-text-warm);
+    color: var(--jsn-dark);
     transform: translateY(-1px) scale(1.02);
-    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(254, 249, 231, 0.3);
   }
 
   /* Apple typography */
@@ -178,7 +186,7 @@
     font-size: clamp(48px, 8vw, 96px);
     line-height: 1.05;
     letter-spacing: -0.04em;
-    background: linear-gradient(135deg, var(--jsn-text) 0%, rgba(255, 255, 255, 0.8) 100%);
+    background: linear-gradient(135deg, var(--jsn-text-warm) 0%, var(--jsn-text-secondary) 50%, var(--jsn-text) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -318,12 +326,12 @@
 /* Navigation styles */
 .apple-nav {
   backdrop-filter: blur(20px) saturate(180%);
-  background: rgba(var(--jsn-primary-rgb), 0.8);
+  background: rgba(212, 165, 3, 0.8);
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .apple-nav.scrolled {
-  background: rgba(var(--jsn-primary-rgb), 0.95);
+  background: rgba(212, 165, 3, 0.95);
   box-shadow: 0 2px 16px var(--jsn-shadow);
 }
 
@@ -359,7 +367,7 @@
 
 /* Gradient text effects */
 .apple-gradient-text {
-  background: linear-gradient(135deg, var(--jsn-text) 0%, rgba(255, 255, 255, 0.7) 50%, var(--jsn-text) 100%);
+  background: linear-gradient(135deg, var(--jsn-text-warm) 0%, var(--jsn-text-secondary) 50%, var(--jsn-text) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

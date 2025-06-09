@@ -36,7 +36,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
           transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="fixed inset-0 z-[100] flex items-center justify-center"
           style={{
-            background: 'linear-gradient(135deg, var(--jsn-primary) 0%, var(--jsn-secondary) 50%, var(--jsn-accent) 100%)',
+            background: 'linear-gradient(135deg, var(--jsn-accent) 0%, var(--jsn-primary) 25%, var(--jsn-primary-light) 50%, var(--jsn-secondary) 75%, var(--jsn-primary-light) 100%)',
           }}
         >
           <div className="text-center">
@@ -53,7 +53,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
                   fontSize: 'clamp(32px, 6vw, 64px)',
                   fontWeight: 700,
                   letterSpacing: '-0.04em',
-                  background: 'linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.8) 100%)',
+                  background: 'linear-gradient(135deg, #fef9e7 0%, rgba(254, 249, 231, 0.9) 50%, rgba(255, 255, 255, 0.8) 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text'
