@@ -10,37 +10,37 @@ export default function BreadcrumbsSchema() {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://jsnsanda.com/"
+          "item": "https://jsmsanda.com/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Serviços de Desinfestação",
-          "item": "https://jsnsanda.com/#services"
+          "item": "https://jsmsanda.com/#services"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Áreas de Atendimento",
-          "item": "https://jsnsanda.com/#areas"
+          "item": "https://jsmsanda.com/#areas"
         },
         {
           "@type": "ListItem",
           "position": 4,
-          "name": "Sobre a JSN SANDA",
-          "item": "https://jsnsanda.com/#about"
+          "name": "Sobre a JSM SANDA",
+          "item": "https://jsmsanda.com/#about"
         },
         {
           "@type": "ListItem",
           "position": 5,
           "name": "Orçamento Gratuito",
-          "item": "https://jsnsanda.com/#quote"
+          "item": "https://jsmsanda.com/#quote"
         },
         {
           "@type": "ListItem",
           "position": 6,
           "name": "Contato",
-          "item": "https://jsnsanda.com/#contact"
+          "item": "https://jsmsanda.com/#contact"
         }
       ]
     };

@@ -59,7 +59,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
                   backgroundClip: 'text'
                 }}
               >
-                JSNSANDA DESINFESTAÇÃO & DESINFECÇÃO
+                JSMSANDA DESINFESTAÇÃO & DESINFECÇÃO
               </h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}

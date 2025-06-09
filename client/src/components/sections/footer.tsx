@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="py-12 px-4 bg-black/20 border-t border-white/10">
       <div className="max-w-6xl mx-auto">
         <div className="text-center">
-          <h3 className="text-2xl font-semibold mb-4">JSN SANDA</h3>
+          <h3 className="text-2xl font-semibold mb-4">JSM SANDA</h3>
           <p className="font-light opacity-90 mb-6">
             Cuidando do seu espaço com segurança e profissionalismo
           </p>
@@ -35,7 +35,7 @@ export default function Footer() {
           </div>
           <div className="border-t border-white/10 pt-8">
             <p className="font-light opacity-70">
-              &copy; 2024 JSN SANDA. Todos os direitos reservados.
+              &copy; 2024 JSM SANDA. Todos os direitos reservados.
             </p>
           </div>
         </div>

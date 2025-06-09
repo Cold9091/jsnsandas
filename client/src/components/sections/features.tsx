@@ -92,7 +92,7 @@ export default function Features() {
             className="apple-headline mb-6"
             style={{ fontSize: 'clamp(40px, 6vw, 64px)' }}
           >
-            Por que escolher a JSN SANDA?
+            Por que escolher a JSM SANDA?
           </h2>
           <motion.div
             initial={{ width: 0 }}

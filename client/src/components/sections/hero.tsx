@@ -70,7 +70,7 @@ export default function Hero() {
           variants={itemVariants}
           className="apple-subheadline mb-16 max-w-4xl mx-auto"
         >
-          JSN SANDA oferece desinfestação, desratização, limpeza e desinfecção profissional em todo territorio angolano. 
+          JSM SANDA oferece desinfestação, desratização, limpeza e desinfecção profissional em todo territorio angolano. 
           Eliminação de baratas, ratos, cupins e todas as pragas urbanas e rústica com garantia de resultado.
         </motion.p>
         

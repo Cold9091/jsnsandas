@@ -59,7 +59,7 @@ export default function Navigation() {
                 letterSpacing: '-0.02em' 
               }}
             >
-              JSNSANDA DESINFESTAÇÃO & DESINFECÇÃO
+              JSMSANDA DESINFESTAÇÃO & DESINFECÇÃO
             </button>
           </motion.div>
 
