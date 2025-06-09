@@ -138,15 +138,38 @@ export default function PerformanceOptimizer() {
     addResourceHints();
     optimizeWebVitals();
 
-    // Monitor Core Web Vitals
-    if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(console.log);
-        getFID(console.log);
-        getFCP(console.log);
-        getLCP(console.log);
-        getTTFB(console.log);
-      });
+    // Monitor Core Web Vitals manually
+    const monitorWebVitals = () => {
+      // Monitor LCP
+      new PerformanceObserver((entryList) => {
+        const entries = entryList.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        console.log('LCP:', lastEntry.startTime);
+      }).observe({entryTypes: ['largest-contentful-paint']});
+
+      // Monitor FID
+      new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+          console.log('FID:', entry.processingStart - entry.startTime);
+        }
+      }).observe({type: 'first-input', buffered: true});
+
+      // Monitor CLS
+      let clsValue = 0;
+      new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
+            console.log('CLS:', clsValue);
+          }
+        }
+      }).observe({type: 'layout-shift', buffered: true});
+    };
+
+    try {
+      monitorWebVitals();
+    } catch (error) {
+      // Silently fail if performance monitoring is not supported
     }
 
   }, []);

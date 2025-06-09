@@ -13,36 +13,36 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "Quais tipos de pragas vocês eliminam?",
-      answer: "Eliminamos todos os tipos de pragas urbanas incluindo baratas, ratos, formigas, cupins, mosquitos, aranhas, pulgas, carrapatos e outros insetos. Nossa equipe é especializada em pragas comuns em Angola."
+      question: "Qual a melhor empresa de desinfestação em Luanda?",
+      answer: "A JSN SANDA é líder em desinfestação em Luanda, Angola. Oferecemos serviços de controle de pragas, desratização e desinfecção com atendimento 24h em toda região metropolitana de Luanda."
     },
     {
-      question: "Os produtos utilizados são seguros para crianças e animais?",
-      answer: "Sim, utilizamos apenas produtos certificados e seguros. Nossos tratamentos são desenvolvidos para serem eficazes contra pragas, mas seguros para pessoas e animais domésticos quando aplicados corretamente."
+      question: "Quanto custa desinfestação em Angola?",
+      answer: "O preço da desinfestação em Angola varia conforme o tipo de praga e tamanho da área. A JSN SANDA oferece orçamento gratuito em Luanda. Entre em contato pelo +244 939 103 175 para avaliação sem custo."
     },
     {
-      question: "Quanto tempo demora para ver resultados?",
-      answer: "Os resultados variam conforme o tipo de praga e o grau de infestação. Geralmente, você verá uma redução significativa dentro de 24-48 horas. Para eliminação completa, pode levar de 1 a 2 semanas."
+      question: "Como eliminar baratas em Luanda definitivamente?",
+      answer: "Para eliminar baratas definitivamente em Luanda, utilize os serviços profissionais da JSN SANDA. Nossos produtos específicos eliminam baratas e ovos, com garantia de 6 meses contra reinfestação."
     },
     {
-      question: "Vocês oferecem garantia nos serviços?",
-      answer: "Sim, oferecemos garantia de até 6 meses em nossos serviços, dependendo do tipo de tratamento. Se as pragas retornarem durante o período de garantia, retornamos gratuitamente."
+      question: "Desratização em Angola - como funciona?",
+      answer: "A desratização em Angola pela JSN SANDA utiliza iscas especiais e bloqueio de acesso. Atendemos toda Luanda com equipamentos modernos e produtos seguros para eliminação completa de ratos."
     },
     {
-      question: "É necessário sair de casa durante o tratamento?",
-      answer: "Depende do tipo de tratamento. Para a maioria dos nossos serviços, não é necessário sair de casa. Nossa equipe orientará sobre as precauções necessárias caso a caso."
+      question: "JSN SANDA atende em que bairros de Luanda?",
+      answer: "Atendemos toda Luanda: Ingombota, Maianga, Rangel, Samba, Sambizanga, Kilamba Kiaxi, Talatona, Viana, Cacuaco e demais municípios. Cobertura 24h em toda região metropolitana."
     },
     {
-      question: "Vocês atendem em emergências?",
-      answer: "Sim, temos atendimento de emergência 24/7. Para casos urgentes, nossa equipe pode estar no local em até 2 horas, dependendo da localização em Luanda."
+      question: "Cupins em Angola - como eliminar?",
+      answer: "Para eliminar cupins em Angola, a JSN SANDA usa fumigação e tratamento localizado. Protegemos móveis de madeira e estruturas com produtos específicos contra cupins em Luanda."
     },
     {
-      question: "Como é feito o orçamento?",
-      answer: "O orçamento é gratuito e personalizado. Realizamos uma visita técnica para avaliar a situação e apresentamos um plano de ação detalhado com preços transparentes."
+      question: "Serviços de desinfecção em tempos de COVID em Angola?",
+      answer: "A JSN SANDA oferece desinfecção profissional contra vírus e bactérias em Luanda. Utilizamos produtos certificados para desinfecção de ambientes residenciais e comerciais em Angola."
     },
     {
-      question: "Vocês trabalham com empresas e condomínios?",
-      answer: "Sim, atendemos residências, empresas, condomínios, hotéis, restaurantes e qualquer tipo de estabelecimento. Temos contratos de manutenção preventiva para empresas."
+      question: "Controle de pragas para restaurantes em Luanda?",
+      answer: "Oferecemos controle de pragas especializado para restaurantes em Luanda. Programas de manutenção preventiva adequados às normas sanitárias de Angola, com certificados para vigilância sanitária."
     }
   ];
 
@@ -96,7 +96,7 @@ export default function FAQ() {
               className="apple-headline"
               style={{ fontSize: 'clamp(40px, 6vw, 64px)' }}
             >
-              Dúvidas Frequentes
+              Perguntas sobre Desinfestação em Angola
             </h2>
           </div>
           <motion.div
