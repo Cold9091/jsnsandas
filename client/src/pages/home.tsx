@@ -4,6 +4,7 @@ import Hero from "@/components/sections/hero";
 import About from "@/components/sections/about";
 import Features from "@/components/sections/features";
 import Services from "@/components/sections/services";
+import Products from "@/components/sections/products";
 import Process from "@/components/sections/process";
 import Areas from "@/components/sections/areas";
 import Stats from "@/components/sections/stats";
@@ -41,6 +42,7 @@ export default function Home() {
       <Features />
       <About />
       <Services />
+      <Products />
       <Process />
       <Areas />
       <Stats />

@@ -25,6 +25,7 @@ export default function Navigation() {
     { id: "home", label: "Início" },
     { id: "about", label: "Quem Somos" },
     { id: "services", label: "Serviços" },
+    { id: "products", label: "Produtos" },
     { id: "areas", label: "Áreas" },
     { id: "quote", label: "Orçamento" },
     { id: "contact", label: "Contactos" },

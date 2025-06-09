@@ -2,13 +2,12 @@ import { Phone, Mail, MapPin, Facebook } from "lucide-react";
 
 export default function Contact() {
   const phones = [
-    "+244 939 103 175",
-    "+244 990 103 175",
-    "940 354 740",
+    "+244 932 036 524",
+    "+244 940 354 740",
     "222 030 955",
   ];
 
-  const emails = ["jortikisandas@gmail.com", "jsmsanda@gmail.com"];
+  const emails = ["jsmsanda@gmail.com"];
 
   return (
     <section id="contact" className="py-20 px-4">

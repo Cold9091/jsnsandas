@@ -61,7 +61,7 @@ export default function Hero() {
           variants={itemVariants}
           className="apple-headline apple-gradient-text mb-8"
         >
-          Desinfestação Profissional em Luanda
+          Desinfestação, desinfecção e Limpeza Profissional
           <br />
           <span style={{ fontWeight: 700 }}>Controle de Pragas 24h em Angola</span>
         </motion.h1>
@@ -70,8 +70,8 @@ export default function Hero() {
           variants={itemVariants}
           className="apple-subheadline mb-16 max-w-4xl mx-auto"
         >
-          JSN SANDA oferece desinfestação, desratização e desinfecção profissional em Luanda. 
-          Eliminação de baratas, ratos, cupins e todas as pragas urbanas com garantia de resultado.
+          JSN SANDA oferece desinfestação, desratização, limpeza e desinfecção profissional em todo territorio angolano. 
+          Eliminação de baratas, ratos, cupins e todas as pragas urbanas e rústica com garantia de resultado.
         </motion.p>
         
         <motion.div
