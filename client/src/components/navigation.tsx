@@ -53,12 +53,12 @@ export default function Navigation() {
               onClick={() => handleNavClick("home")}
               className="text-2xl font-semibold tracking-tight"
               style={{ 
-                fontSize: '20px',
+                fontSize: '18px',
                 fontWeight: 600,
                 letterSpacing: '-0.02em' 
               }}
             >
-              JSN SANDA
+              JSNSANDA DESINFESTAÇÃO & DESINFECÇÃO
             </button>
           </motion.div>
 

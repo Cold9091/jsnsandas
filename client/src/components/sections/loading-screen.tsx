@@ -50,7 +50,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
               <h1 
                 className="text-6xl font-bold mb-4"
                 style={{
-                  fontSize: 'clamp(40px, 8vw, 80px)',
+                  fontSize: 'clamp(32px, 6vw, 64px)',
                   fontWeight: 700,
                   letterSpacing: '-0.04em',
                   background: 'linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.8) 100%)',
@@ -59,7 +59,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
                   backgroundClip: 'text'
                 }}
               >
-                JSN SANDA
+                JSNSANDA DESINFESTAÇÃO & DESINFECÇÃO
               </h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
