@@ -283,10 +283,10 @@
 }
 
 .apple-select {
-  background: var(--jsn-glass);
-  border: 1px solid var(--jsn-glass-border);
+  background: var(--jsm-glass);
+  border: 1px solid var(--jsm-glass-border);
   border-radius: 12px;
-  color: var(--jsn-text);
+  color: var(--jsm-text);
   font-size: 17px;
   line-height: 1.235;
   padding: 16px 20px;
