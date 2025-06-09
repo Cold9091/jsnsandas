@@ -22,6 +22,7 @@ import LoadingScreen from "@/components/sections/loading-screen";
 import SEOHead from "@/components/seo-head";
 import PerformanceOptimizer from "@/components/performance-optimizer";
 import BreadcrumbsSchema from "@/components/breadcrumbs-schema";
+import FinalSEOBoost from "@/components/final-seo-boost";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -33,8 +34,6 @@ export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden apple-particles">
       <SEOHead />
-      <PerformanceOptimizer />
-      <BreadcrumbsSchema />
       <ScrollProgress />
       <SmoothScroll />
       <Navigation />

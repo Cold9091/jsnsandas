@@ -15,7 +15,7 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light mb-6 tracking-tight">
-            Contactos
+            Contato JSN SANDA - Desinfestação Luanda 24h
           </h2>
           <div className="w-20 h-1 bg-white mx-auto rounded-full"></div>
         </div>
@@ -33,6 +33,15 @@ export default function Contact() {
                     <a
                       href={`tel:${phone.replace(/\s/g, "")}`}
                       className="hover:text-white/80 transition-colors duration-200"
+                      onClick={() => {
+                        if (typeof window !== 'undefined' && window.gtag) {
+                          window.gtag('event', 'phone_call', {
+                            event_category: 'contact',
+                            event_label: phone,
+                            value: 1
+                          });
+                        }
+                      }}
                     >
                       {phone}
                     </a>
@@ -69,6 +78,13 @@ export default function Contact() {
                 Prédio 6, Coqueiros – Ingombota
                 <br />
                 Luanda – Angola
+                <br />
+                <span className="text-sm opacity-75 mt-2 block">
+                  📍 Atendemos: Ingombota, Maianga, Rangel, Talatona, Kilamba
+                </span>
+                <span className="text-sm opacity-75">
+                  ⏰ Funcionamento: 24 horas por dia, 7 dias por semana
+                </span>
               </p>
             </div>
 
