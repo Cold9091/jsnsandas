@@ -7,8 +7,8 @@ export default function FinalSEOBoost() {
       "@context": "https://schema.org",
       "@type": "HomeAndConstructionBusiness",
       "@id": "https://jsnsanda.com/#pest-control-business",
-      "name": "JSN SANDA - Desinfestação Angola",
-      "alternateName": ["JSN SANDA", "JSN SANDA Lda", "JSN SANDA Angola"],
+      "name": "JSM SANDA - Desinfestação Angola",
+      "alternateName": ["JSM SANDA", "JSM SANDA Lda", "JSM SANDA Angola"],
       "description": "Empresa líder em desinfestação, controle de pragas e desratização em Luanda, Angola. Serviços profissionais 24h com garantia de resultado.",
       "url": "https://jsnsanda.com",
       "logo": "https://jsnsanda.com/logo.png",
@@ -117,12 +117,12 @@ export default function FinalSEOBoost() {
             "@type": "Person",
             "name": "Cliente Luanda"
           },
-          "reviewBody": "Excelente serviço de desinfestação em Luanda. JSN SANDA resolveu problema de baratas rapidamente."
+          "reviewBody": "Excelente serviço de desinfestação em Luanda. JSM SANDA resolveu problema de baratas rapidamente."
         }
       ],
       "founder": {
         "@type": "Person",
-        "name": "JSN SANDA"
+        "name": "JSM SANDA"
       },
       "foundingDate": "2020",
       "slogan": "Protegendo sua saúde e bem-estar em Angola"
@@ -132,7 +132,7 @@ export default function FinalSEOBoost() {
     const emergencyServiceSchema = {
       "@context": "https://schema.org",
       "@type": "EmergencyService",
-      "name": "JSN SANDA Emergência 24h",
+      "name": "JSM SANDA Emergência 24h",
       "description": "Atendimento de emergência para desinfestação em Luanda 24 horas por dia",
       "provider": {
         "@id": "https://jsnsanda.com/#pest-control-business"
@@ -149,11 +149,11 @@ export default function FinalSEOBoost() {
     const servicesProductSchema = {
       "@context": "https://schema.org",
       "@type": "Product",
-      "name": "Serviços de Desinfestação JSN SANDA",
+      "name": "Serviços de Desinfestação JSM SANDA",
       "description": "Pacote completo de serviços de controle de pragas em Luanda, Angola",
       "brand": {
         "@type": "Brand",
-        "name": "JSN SANDA"
+        "name": "JSM SANDA"
       },
       "category": "Pest Control Services",
       "offers": {

@@ -7,7 +7,7 @@ export default function SEOHead() {
       "@context": "https://schema.org",
       "@type": "Review",
       "@id": "https://jsnsanda.com/#review1",
-      "reviewBody": "Excelente serviço de desinfestação! A JSN SANDA eliminou completamente o problema de baratas em nosso restaurante. Equipe profissional e pontual.",
+      "reviewBody": "Excelente serviço de desinfestação! A JSM SANDA eliminou completamente o problema de baratas em nosso restaurante. Equipe profissional e pontual.",
       "reviewRating": {
         "@type": "Rating",
         "ratingValue": "5",
@@ -19,7 +19,7 @@ export default function SEOHead() {
       },
       "itemReviewed": {
         "@type": "LocalBusiness",
-        "name": "JSN SANDA",
+        "name": "JSM SANDA",
         "@id": "https://jsnsanda.com/#business"
       }
     };
@@ -44,7 +44,7 @@ export default function SEOHead() {
         {
           "@type": "Review", 
           "position": 2,
-          "reviewBody": "Equipe muito profissional da JSN SANDA. Fizeram desinfecção completa em nosso hotel. Clientes muito satisfeitos!",
+          "reviewBody": "Equipe muito profissional da JSM SANDA. Fizeram desinfecção completa em nosso hotel. Clientes muito satisfeitos!",
           "reviewRating": {
             "@type": "Rating",
             "ratingValue": "5"
@@ -75,7 +75,7 @@ export default function SEOHead() {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "@id": "https://jsnsanda.com/#professional-service",
-      "name": "JSN SANDA - Controle de Pragas Angola",
+      "name": "JSM SANDA - Controle de Pragas Angola",
       "description": "Serviços profissionais de desinfestação, desratização e controle de pragas em Luanda, Angola",
       "provider": {
         "@id": "https://jsnsanda.com/#business"

@@ -6,7 +6,7 @@ export default function About() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light mb-6 tracking-tight">
-            JSN SANDA - Empresa de Desinfestação em Luanda
+            JSM SANDA - Empresa de Desinfestação em Luanda
           </h2>
           <div className="w-20 h-1 bg-white mx-auto rounded-full"></div>
         </div>
@@ -14,7 +14,7 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg font-light leading-relaxed opacity-90">
-              A JSN SANDA é líder em desinfestação profissional em Angola, especializada em 
+              A JSM SANDA é líder em desinfestação profissional em Angola, especializada em 
               controle de pragas, desratização e desinfecção em Luanda e região metropolitana. 
               Atendemos residências, empresas e indústrias com soluções seguras e eficazes.
             </p>

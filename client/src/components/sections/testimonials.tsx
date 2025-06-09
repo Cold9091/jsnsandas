@@ -21,7 +21,7 @@ export default function Testimonials() {
       name: "João Costa",
       role: "Administrador de Condomínio",
       location: "Ingombota",
-      text: "Contratamos a JSN SANDA para desinfestação do condomínio. Resultado impecável e garantia cumprida. Recomendo totalmente!",
+      text: "Contratamos a JSM SANDA para desinfestação do condomínio. Resultado impecável e garantia cumprida. Recomendo totalmente!",
       rating: 5,
       image: "JC"
     },

@@ -49,7 +49,7 @@ export default function BreadcrumbsSchema() {
       "@context": "https://schema.org",
       "@type": "HowTo",
       "name": "Como Solicitar Serviço de Desinfestação em Luanda",
-      "description": "Passos para contratar serviços de desinfestação profissional da JSN SANDA em Angola",
+      "description": "Passos para contratar serviços de desinfestação profissional da JSM SANDA em Angola",
       "image": "https://jsnsanda.com/images/como-solicitar-servico.jpg",
       "totalTime": "PT15M",
       "estimatedCost": {

@@ -14,7 +14,7 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light mb-6 tracking-tight">
-            Contato JSN SANDA - Desinfestação Luanda 24h
+            Contato JSM SANDA - Desinfestação Luanda 24h
           </h2>
           <div className="w-20 h-1 bg-white mx-auto rounded-full"></div>
         </div>

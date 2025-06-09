@@ -14,31 +14,31 @@ export default function FAQ() {
   const faqs = [
     {
       question: "Qual a melhor empresa de desinfestação em Luanda?",
-      answer: "A JSN SANDA é líder em desinfestação em Luanda, Angola. Oferecemos serviços de controle de pragas, desratização e desinfecção com atendimento 24h em toda região metropolitana de Luanda."
+      answer: "A JSM SANDA é líder em desinfestação em Luanda, Angola. Oferecemos serviços de controle de pragas, desratização e desinfecção com atendimento 24h em toda região metropolitana de Luanda."
     },
     {
       question: "Quanto custa desinfestação em Angola?",
-      answer: "O preço da desinfestação em Angola varia conforme o tipo de praga e tamanho da área. A JSN SANDA oferece orçamento gratuito em Luanda. Entre em contato pelo +244 939 103 175 para avaliação sem custo."
+      answer: "O preço da desinfestação em Angola varia conforme o tipo de praga e tamanho da área. A JSM SANDA oferece orçamento gratuito em Luanda. Entre em contato pelo +244 939 103 175 para avaliação sem custo."
     },
     {
       question: "Como eliminar baratas em Luanda definitivamente?",
-      answer: "Para eliminar baratas definitivamente em Luanda, utilize os serviços profissionais da JSN SANDA. Nossos produtos específicos eliminam baratas e ovos, com garantia de 6 meses contra reinfestação."
+      answer: "Para eliminar baratas definitivamente em Luanda, utilize os serviços profissionais da JSM SANDA. Nossos produtos específicos eliminam baratas e ovos, com garantia de 6 meses contra reinfestação."
     },
     {
       question: "Desratização em Angola - como funciona?",
-      answer: "A desratização em Angola pela JSN SANDA utiliza iscas especiais e bloqueio de acesso. Atendemos toda Luanda com equipamentos modernos e produtos seguros para eliminação completa de ratos."
+      answer: "A desratização em Angola pela JSM SANDA utiliza iscas especiais e bloqueio de acesso. Atendemos toda Luanda com equipamentos modernos e produtos seguros para eliminação completa de ratos."
     },
     {
-      question: "JSN SANDA atende em que bairros de Luanda?",
+      question: "JSM SANDA atende em que bairros de Luanda?",
       answer: "Atendemos toda Luanda: Ingombota, Maianga, Rangel, Samba, Sambizanga, Kilamba Kiaxi, Talatona, Viana, Cacuaco e demais municípios. Cobertura 24h em toda região metropolitana."
     },
     {
       question: "Cupins em Angola - como eliminar?",
-      answer: "Para eliminar cupins em Angola, a JSN SANDA usa fumigação e tratamento localizado. Protegemos móveis de madeira e estruturas com produtos específicos contra cupins em Luanda."
+      answer: "Para eliminar cupins em Angola, a JSM SANDA usa fumigação e tratamento localizado. Protegemos móveis de madeira e estruturas com produtos específicos contra cupins em Luanda."
     },
     {
       question: "Serviços de desinfecção em tempos de COVID em Angola?",
-      answer: "A JSN SANDA oferece desinfecção profissional contra vírus e bactérias em Luanda. Utilizamos produtos certificados para desinfecção de ambientes residenciais e comerciais em Angola."
+      answer: "A JSM SANDA oferece desinfecção profissional contra vírus e bactérias em Luanda. Utilizamos produtos certificados para desinfecção de ambientes residenciais e comerciais em Angola."
     },
     {
       question: "Controle de pragas para restaurantes em Luanda?",
