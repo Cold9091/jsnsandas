@@ -257,10 +257,10 @@
 
 /* Apple-style form elements */
 .apple-input {
-  background: var(--jsn-glass);
-  border: 1px solid var(--jsn-glass-border);
+  background: var(--jsm-glass);
+  border: 1px solid var(--jsm-glass-border);
   border-radius: 12px;
-  color: var(--jsn-text);
+  color: var(--jsm-text);
   font-size: 17px;
   line-height: 1.235;
   padding: 16px 20px;
@@ -270,16 +270,16 @@
 }
 
 .apple-input::placeholder {
-  color: var(--jsn-text-muted);
+  color: var(--jsm-text-muted);
 }
 
 .apple-input:focus {
   outline: none;
   border-color: rgba(255, 255, 255, 0.3);
-  background: var(--jsn-glass-hover);
+  background: var(--jsm-glass-hover);
   box-shadow: 
     0 0 0 4px rgba(255, 255, 255, 0.1),
-    0 8px 32px var(--jsn-shadow);
+    0 8px 32px var(--jsm-shadow);
 }
 
 .apple-select {
@@ -296,10 +296,10 @@
 }
 
 .apple-textarea {
-  background: var(--jsn-glass);
-  border: 1px solid var(--jsn-glass-border);
+  background: var(--jsm-glass);
+  border: 1px solid var(--jsm-glass-border);
   border-radius: 12px;
-  color: var(--jsn-text);
+  color: var(--jsm-text);
   font-size: 17px;
   line-height: 1.42;
   padding: 16px 20px;
@@ -311,16 +311,16 @@
 }
 
 .apple-textarea::placeholder {
-  color: var(--jsn-text-muted);
+  color: var(--jsm-text-muted);
 }
 
 .apple-textarea:focus {
   outline: none;
   border-color: rgba(255, 255, 255, 0.3);
-  background: var(--jsn-glass-hover);
+  background: var(--jsm-glass-hover);
   box-shadow: 
     0 0 0 4px rgba(255, 255, 255, 0.1),
-    0 8px 32px var(--jsn-shadow);
+    0 8px 32px var(--jsm-shadow);
 }
 
 /* Navigation styles */
@@ -332,7 +332,7 @@
 
 .apple-nav.scrolled {
   background: rgba(212, 165, 3, 0.95);
-  box-shadow: 0 2px 16px var(--jsn-shadow);
+  box-shadow: 0 2px 16px var(--jsm-shadow);
 }
 
 /* Subtle hover effects */
@@ -367,7 +367,7 @@
 
 /* Gradient text effects */
 .apple-gradient-text {
-  background: linear-gradient(135deg, var(--jsn-text-warm) 0%, var(--jsn-text-secondary) 50%, var(--jsn-text) 100%);
+  background: linear-gradient(135deg, var(--jsm-text-warm) 0%, var(--jsm-text-secondary) 50%, var(--jsm-text) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
