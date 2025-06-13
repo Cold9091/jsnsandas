@@ -23,6 +23,40 @@ export default function About() {
               eliminação de baratas, ratos, cupins, formigas e demais pragas urbanas. Garantimos 
               resultados duradouros com atendimento 24 horas em toda Luanda.
             </p>
+            
+            {/* Fotos da Equipe e Equipamentos */}
+            <div className="grid grid-cols-2 gap-4 mt-8">
+              <div className="glass-effect rounded-xl p-4">
+                <div className="aspect-square mb-3" dangerouslySetInnerHTML={{
+                  __html: `<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="300" height="300" fill="#4682B4"/>
+                    <circle cx="150" cy="120" r="40" fill="#F5DEB3" stroke="#DEB887" stroke-width="2"/>
+                    <rect x="120" y="160" width="60" height="80" fill="#32CD32" stroke="#228B22" stroke-width="2"/>
+                    <rect x="130" y="170" width="40" height="60" fill="#228B22"/>
+                    <rect x="100" y="240" width="100" height="40" fill="#8B4513" stroke="#654321" stroke-width="1"/>
+                    <rect x="140" y="200" width="20" height="20" fill="#FFD700"/>
+                    <text x="150" y="295" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Técnico Especializado</text>
+                  </svg>`
+                }} />
+                <h4 className="text-sm font-semibold text-center">Equipe Técnica</h4>
+              </div>
+              
+              <div className="glass-effect rounded-xl p-4">
+                <div className="aspect-square mb-3" dangerouslySetInnerHTML={{
+                  __html: `<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="300" height="300" fill="#2F4F4F"/>
+                    <rect x="50" y="100" width="200" height="120" fill="#C0C0C0" stroke="#808080" stroke-width="2"/>
+                    <circle cx="150" cy="160" r="30" fill="#FFD700" stroke="#FFA500" stroke-width="2"/>
+                    <rect x="80" y="220" width="140" height="30" fill="#32CD32" stroke="#228B22" stroke-width="1"/>
+                    <rect x="120" y="80" width="60" height="20" fill="#FF6347"/>
+                    <circle cx="100" cy="130" r="8" fill="#FF0000"/>
+                    <circle cx="200" cy="130" r="8" fill="#00FF00"/>
+                    <text x="150" y="285" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Equipamento Profissional</text>
+                  </svg>`
+                }} />
+                <h4 className="text-sm font-semibold text-center">Equipamentos</h4>
+              </div>
+            </div>
           </div>
 
           <div className="space-y-8">

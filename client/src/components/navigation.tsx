@@ -53,7 +53,7 @@ export default function Navigation() {
           >
             <button
               onClick={() => handleNavClick("home")}
-              className="flex items-center space-x-3"
+              className="flex items-center"
             >
               <img 
                 src={logoPath} 
@@ -61,16 +61,6 @@ export default function Navigation() {
                 className="h-12 w-auto"
                 style={{ filter: 'drop-shadow(0 0 8px rgba(255, 255, 255, 0.3))' }}
               />
-              <span
-                className="text-2xl font-semibold tracking-tight hidden md:block"
-                style={{ 
-                  fontSize: '18px',
-                  fontWeight: 600,
-                  letterSpacing: '-0.02em' 
-                }}
-              >
-                JSMSANDA DESINFESTAÇÃO & DESINFECÇÃO
-              </span>
             </button>
           </motion.div>
 
