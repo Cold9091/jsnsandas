@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import logoPath from "@assets/286440570_3336173516614824_6308129545469397056_n - Editado_1749777094774.png";
 
 interface LoadingScreenProps {
   onComplete: () => void;
@@ -45,8 +46,19 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="mb-12"
+              className="mb-12 flex flex-col items-center"
             >
+              <motion.img 
+                src={logoPath} 
+                alt="JSMSANDA Logo" 
+                className="h-32 w-auto mb-8"
+                style={{ 
+                  filter: 'drop-shadow(0 0 20px rgba(255, 255, 255, 0.5)) brightness(1.1)',
+                }}
+                initial={{ scale: 0.5, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
+              />
               <h1 
                 className="text-6xl font-bold mb-4"
                 style={{

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { scrollToSection } from "@/lib/utils";
+import logoPath from "@assets/286440570_3336173516614824_6308129545469397056_n - Editado_1749777094774.png";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -52,14 +53,24 @@ export default function Navigation() {
           >
             <button
               onClick={() => handleNavClick("home")}
-              className="text-2xl font-semibold tracking-tight"
-              style={{ 
-                fontSize: '18px',
-                fontWeight: 600,
-                letterSpacing: '-0.02em' 
-              }}
+              className="flex items-center space-x-3"
             >
-              JSMSANDA DESINFESTAÇÃO & DESINFECÇÃO
+              <img 
+                src={logoPath} 
+                alt="JSMSANDA Logo" 
+                className="h-12 w-auto"
+                style={{ filter: 'drop-shadow(0 0 8px rgba(255, 255, 255, 0.3))' }}
+              />
+              <span
+                className="text-2xl font-semibold tracking-tight hidden md:block"
+                style={{ 
+                  fontSize: '18px',
+                  fontWeight: 600,
+                  letterSpacing: '-0.02em' 
+                }}
+              >
+                JSMSANDA DESINFESTAÇÃO & DESINFECÇÃO
+              </span>
             </button>
           </motion.div>
 
