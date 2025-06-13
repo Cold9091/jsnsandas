@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { scrollToSection } from "@/lib/utils";
 import logoPath from "@assets/286440570_3336173516614824_6308129545469397056_n - Editado_1749777094774.png";
@@ -22,6 +22,10 @@ export default function Navigation() {
     setIsMenuOpen(false);
   };
 
+  const handleCallClick = () => {
+    window.location.href = "tel:+244932036524";
+  };
+
   const navItems = [
     { id: "home", label: "Início" },
     { id: "about", label: "Quem Somos" },
@@ -38,8 +42,9 @@ export default function Navigation() {
         isScrolled ? "scrolled" : ""
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
           <div className="flex-shrink-0">
             <button
               onClick={() => handleNavClick("home")}
@@ -54,8 +59,8 @@ export default function Navigation() {
             </button>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:block">
+          {/* Centered Desktop Navigation */}
+          <div className="hidden lg:flex flex-1 justify-center">
             <div className="flex items-center space-x-1">
               {navItems.map((item) => (
                 <button
@@ -72,6 +77,23 @@ export default function Navigation() {
                 </button>
               ))}
             </div>
+          </div>
+
+          {/* Call Button - Desktop */}
+          <div className="hidden lg:flex">
+            <button
+              onClick={handleCallClick}
+              className="flex items-center px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
+              style={{
+                background: 'var(--jsm-secondary)',
+                fontSize: '16px',
+                fontWeight: 500,
+                letterSpacing: '-0.02em'
+              }}
+            >
+              <Phone className="h-4 w-4 mr-2" />
+              Ligar Agora
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -107,6 +129,23 @@ export default function Navigation() {
                   {item.label}
                 </button>
               ))}
+              
+              {/* Mobile Call Button */}
+              <div className="pt-4 border-t border-blue-200">
+                <button
+                  onClick={handleCallClick}
+                  className="flex items-center justify-center w-full px-6 py-3 text-white rounded-xl font-medium transition-all duration-300 shadow-lg"
+                  style={{
+                    background: 'var(--jsm-secondary)',
+                    fontSize: '16px',
+                    fontWeight: 500,
+                    letterSpacing: '-0.02em'
+                  }}
+                >
+                  <Phone className="h-4 w-4 mr-2" />
+                  Ligar Agora
+                </button>
+              </div>
             </div>
           </div>
         )}
