@@ -81,15 +81,8 @@
   body {
     @apply antialiased;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background: linear-gradient(135deg, 
-      var(--jsm-accent) 0%, 
-      var(--jsm-primary) 25%, 
-      var(--jsm-primary-light) 50%, 
-      var(--jsm-secondary) 75%, 
-      var(--jsm-primary-light) 100%
-    );
-    background-attachment: fixed;
-    color: var(--jsm-text-warm);
+    background: #ffffff;
+    color: var(--jsm-dark);
     min-height: 100vh;
     overflow-x: hidden;
     letter-spacing: -0.011em;
@@ -243,10 +236,7 @@
     font-size: clamp(48px, 8vw, 96px);
     line-height: 1.05;
     letter-spacing: -0.04em;
-    background: linear-gradient(135deg, var(--jsm-text-warm) 0%, var(--jsm-text-secondary) 50%, var(--jsm-text) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--jsm-dark);
   }
 
   .apple-subheadline {
@@ -254,7 +244,7 @@
     font-size: clamp(21px, 3vw, 28px);
     line-height: 1.38;
     letter-spacing: -0.012em;
-    color: var(--jsm-text-secondary);
+    color: #666666;
   }
 
   .apple-body {
@@ -262,7 +252,7 @@
     font-size: 19px;
     line-height: 1.42;
     letter-spacing: -0.012em;
-    color: var(--jsm-text-muted);
+    color: #888888;
   }
 
   /* Apple animations */
@@ -383,13 +373,14 @@
 /* Navigation styles */
 .apple-nav {
   backdrop-filter: blur(20px) saturate(180%);
-  background: rgba(212, 165, 3, 0.8);
+  background: rgba(255, 255, 255, 0.95);
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  color: var(--jsm-dark);
 }
 
 .apple-nav.scrolled {
-  background: rgba(212, 165, 3, 0.95);
-  box-shadow: 0 2px 16px var(--jsm-shadow);
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
 }
 
 /* Subtle hover effects */

@@ -33,24 +33,14 @@ export default function Navigation() {
   ];
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ 
-        duration: 0.8, 
-        ease: [0.25, 0.46, 0.45, 0.94] 
-      }}
+    <nav
       className={`fixed top-0 w-full z-50 apple-nav ${
         isScrolled ? "scrolled" : ""
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <motion.div 
-            className="flex-shrink-0"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
+          <div className="flex-shrink-0">
             <button
               onClick={() => handleNavClick("home")}
               className="flex items-center"
@@ -62,7 +52,7 @@ export default function Navigation() {
                 style={{ filter: 'drop-shadow(0 0 8px rgba(255, 255, 255, 0.3))' }}
               />
             </button>
-          </motion.div>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
@@ -170,6 +160,6 @@ export default function Navigation() {
           )}
         </AnimatePresence>
       </div>
-    </motion.nav>
+    </nav>
   );
 }
