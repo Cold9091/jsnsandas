@@ -61,7 +61,7 @@ export default function Navigation() {
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  className="px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 hover:bg-gray-100 text-gray-800 hover:text-gray-900"
+                  className="px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 hover:bg-blue-50 text-blue-800 hover:text-blue-900"
                   style={{
                     fontSize: '17px',
                     fontWeight: 400,
@@ -78,7 +78,7 @@ export default function Navigation() {
           <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-3 rounded-full hover:bg-gray-100 transition-colors duration-300 text-gray-800"
+              className="p-3 rounded-full hover:bg-blue-50 transition-colors duration-300 text-blue-800"
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -92,7 +92,7 @@ export default function Navigation() {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="lg:hidden">
-            <div className="px-4 pt-4 pb-6 space-y-2 bg-white/95 backdrop-blur-md rounded-2xl mx-4 mb-4 border border-gray-200">
+            <div className="px-4 pt-4 pb-6 space-y-2 bg-white/95 backdrop-blur-md rounded-2xl mx-4 mb-4 border border-blue-200">
               {navItems.map((item) => (
                 <button
                   key={item.id}
