@@ -10,7 +10,11 @@ export default function WhatsAppFloat() {
     <motion.button
       onClick={handleWhatsAppClick}
       className="fixed bottom-8 right-8 z-50 p-4 rounded-full shadow-2xl"
-      style={{ backgroundColor: 'var(--jsm-blue)' }}
+      style={{ 
+        backgroundColor: 'var(--jsm-blue)',
+        backdropFilter: "blur(10px)",
+        border: "1px solid rgba(255, 255, 255, 0.1)"
+      }}
       aria-label="Contactar via WhatsApp"
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
