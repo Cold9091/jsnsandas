@@ -88,7 +88,7 @@ export default function Hero() {
           </motion.button>
           <motion.button
             onClick={() => scrollToSection("quote")}
-            className="apple-button-secondary apple-button-enhanced apple-hover-lift"
+            className="apple-button-blue apple-button-enhanced apple-hover-lift"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

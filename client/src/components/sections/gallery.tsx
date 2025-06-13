@@ -176,7 +176,13 @@ export default function Gallery() {
         >
           <h2 
             className="apple-headline mb-6"
-            style={{ fontSize: 'clamp(40px, 6vw, 64px)' }}
+            style={{ 
+              fontSize: 'clamp(40px, 6vw, 64px)',
+              background: 'linear-gradient(135deg, var(--jsm-text-warm) 0%, var(--jsm-blue) 50%, var(--jsm-text-secondary) 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}
           >
             Nossos Trabalhos
           </h2>
@@ -209,16 +215,17 @@ export default function Gallery() {
               onClick={() => setActiveCategory(category)}
               className={`px-6 py-3 rounded-full transition-all duration-300 ${
                 activeCategory === category
-                  ? "bg-white text-[var(--jsn-primary)] font-semibold"
+                  ? "text-white font-semibold"
                   : "apple-glass hover:bg-white/10"
               }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
               style={{
+                backgroundColor: activeCategory === category ? 'var(--jsm-blue)' : undefined,
                 fontSize: '17px',
                 fontWeight: activeCategory === category ? 600 : 400,
                 letterSpacing: '-0.022em'
               }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               {category}
             </motion.button>
