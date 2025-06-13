@@ -134,7 +134,7 @@ export default function Services() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="apple-glass rounded-3xl p-8 text-center group cursor-pointer"
+                className="apple-glass rounded-3xl p-8 text-center group cursor-pointer text-[#1c5c90]"
                 whileHover={{ 
                   scale: 1.05,
                   y: -12,
