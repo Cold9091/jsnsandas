@@ -112,7 +112,13 @@ export default function Quote() {
         >
           <h2 
             className="apple-headline mb-6"
-            style={{ fontSize: 'clamp(40px, 6vw, 64px)' }}
+            style={{ 
+              fontSize: 'clamp(40px, 6vw, 64px)',
+              background: 'linear-gradient(135deg, var(--jsm-text-warm) 0%, var(--jsm-blue) 50%, var(--jsm-text-secondary) 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}
           >
             Solicite seu Orçamento
           </h2>
@@ -376,7 +382,7 @@ export default function Quote() {
                   <motion.button
                     type="button"
                     onClick={() => window.open("https://wa.me/244939103175", "_blank")}
-                    className="apple-button-secondary flex items-center justify-center"
+                    className="apple-button-blue flex items-center justify-center"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >

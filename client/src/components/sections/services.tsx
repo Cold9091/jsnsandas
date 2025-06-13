@@ -152,7 +152,10 @@ export default function Services() {
                 >
                   <IconComponent 
                     className="h-16 w-16 mx-auto"
-                    style={{ strokeWidth: 1.5 }}
+                    style={{ 
+                      strokeWidth: 1.5,
+                      color: index % 3 === 0 ? 'var(--jsm-blue)' : undefined
+                    }}
                   />
                 </motion.div>
                 <h3 

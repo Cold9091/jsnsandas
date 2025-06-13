@@ -69,7 +69,13 @@ export default function Stats() {
         >
           <h2 
             className="apple-headline mb-6"
-            style={{ fontSize: 'clamp(40px, 6vw, 64px)' }}
+            style={{ 
+              fontSize: 'clamp(40px, 6vw, 64px)',
+              background: 'linear-gradient(135deg, var(--jsm-text-warm) 0%, var(--jsm-blue) 50%, var(--jsm-text-secondary) 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}
           >
             Números que falam por si
           </h2>

@@ -5,7 +5,15 @@ export default function About() {
     <section id="about" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light mb-6 tracking-tight">
+          <h2 
+            className="text-4xl md:text-5xl font-light mb-6 tracking-tight"
+            style={{
+              background: 'linear-gradient(135deg, var(--jsm-text-warm) 0%, var(--jsm-blue) 50%, var(--jsm-text-secondary) 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}
+          >
             JSM SANDA - Empresa de Desinfestação em Luanda
           </h2>
           <div className="w-20 h-1 bg-white mx-auto rounded-full"></div>
