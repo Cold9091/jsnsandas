@@ -97,7 +97,7 @@ export default function Navigation() {
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  className="block w-full text-left px-4 py-3 rounded-xl hover:bg-gray-100 transition-all duration-300 text-gray-800"
+                  className="block w-full text-left px-4 py-3 rounded-xl hover:bg-blue-50 transition-all duration-300 text-blue-800"
                   style={{
                     fontSize: '17px',
                     fontWeight: 400,
