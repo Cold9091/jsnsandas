@@ -49,7 +49,7 @@ export default function Navigation() {
                 src={logoPath} 
                 alt="JSMSANDA Logo" 
                 className="h-12 w-auto"
-                style={{ filter: 'drop-shadow(0 0 8px rgba(255, 255, 255, 0.3))' }}
+                style={{ filter: 'drop-shadow(0 0 4px rgba(0, 0, 0, 0.1))' }}
               />
             </button>
           </div>
@@ -57,108 +57,59 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
             <div className="flex items-center space-x-1">
-              {navItems.map((item, index) => (
-                <motion.button
+              {navItems.map((item) => (
+                <button
                   key={item.id}
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ 
-                    delay: index * 0.1 + 0.3,
-                    duration: 0.6,
-                    ease: [0.25, 0.46, 0.45, 0.94]
-                  }}
                   onClick={() => handleNavClick(item.id)}
-                  className="px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 hover:bg-white/10"
+                  className="px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 hover:bg-gray-100 text-gray-800 hover:text-gray-900"
                   style={{
                     fontSize: '17px',
                     fontWeight: 400,
                     letterSpacing: '-0.022em'
                   }}
-                  whileHover={{ 
-                    scale: 1.05,
-                    backgroundColor: 'rgba(255, 255, 255, 0.1)'
-                  }}
-                  whileTap={{ scale: 0.95 }}
                 >
                   {item.label}
-                </motion.button>
+                </button>
               ))}
             </div>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
-            <motion.button
+            <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-3 rounded-full hover:bg-white/10 transition-colors duration-300"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+              className="p-3 rounded-full hover:bg-gray-100 transition-colors duration-300 text-gray-800"
             >
-              <AnimatePresence mode="wait">
-                {isMenuOpen ? (
-                  <motion.div
-                    key="close"
-                    initial={{ rotate: -90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: 90, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <X className="h-6 w-6" />
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="menu"
-                    initial={{ rotate: 90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: -90, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Menu className="h-6 w-6" />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.button>
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
           </div>
         </div>
 
         {/* Mobile Menu */}
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ 
-                duration: 0.4,
-                ease: [0.25, 0.46, 0.45, 0.94]
-              }}
-              className="lg:hidden overflow-hidden"
-            >
-              <div className="px-4 pt-4 pb-6 space-y-2 apple-glass rounded-2xl mx-4 mb-4">
-                {navItems.map((item, index) => (
-                  <motion.button
-                    key={item.id}
-                    initial={{ x: -20, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ 
-                      delay: index * 0.05,
-                      duration: 0.3
-                    }}
-                    onClick={() => handleNavClick(item.id)}
-                    className="block w-full text-left px-4 py-3 rounded-xl hover:bg-white/10 transition-all duration-300"
-                    style={{
-                      fontSize: '17px',
-                      fontWeight: 400,
-                      letterSpacing: '-0.022em'
-                    }}
-                  >
-                    {item.label}
-                  </motion.button>
-                ))}
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {isMenuOpen && (
+          <div className="lg:hidden">
+            <div className="px-4 pt-4 pb-6 space-y-2 bg-white/95 backdrop-blur-md rounded-2xl mx-4 mb-4 border border-gray-200">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => handleNavClick(item.id)}
+                  className="block w-full text-left px-4 py-3 rounded-xl hover:bg-gray-100 transition-all duration-300 text-gray-800"
+                  style={{
+                    fontSize: '17px',
+                    fontWeight: 400,
+                    letterSpacing: '-0.022em'
+                  }}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
