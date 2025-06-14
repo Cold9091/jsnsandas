@@ -59,7 +59,7 @@ export default function Hero() {
       >
         <motion.h1
           variants={itemVariants}
-          className="apple-headline apple-gradient-text mb-8"
+          className="apple-headline apple-gradient-text mb-8 text-gray-900 dark:text-white"
         >
           Desinfestação, desinfecção e Limpeza Profissional
           <br />

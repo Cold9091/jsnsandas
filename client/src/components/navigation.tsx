@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { scrollToSection } from "@/lib/utils";
+import { ThemeToggle } from "@/components/theme-toggle";
 import logoPath from "@assets/286440570_3336173516614824_6308129545469397056_n - Editado_1749777094774.png";
 
 export default function Navigation() {
@@ -66,7 +67,7 @@ export default function Navigation() {
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  className="px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 hover:bg-blue-50 text-blue-800 hover:text-blue-900"
+                  className="px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 text-blue-800 dark:text-blue-200 hover:text-blue-900 dark:hover:text-blue-100"
                   style={{
                     fontSize: '17px',
                     fontWeight: 400,
@@ -79,8 +80,9 @@ export default function Navigation() {
             </div>
           </div>
 
-          {/* Call Button - Desktop */}
-          <div className="hidden lg:flex">
+          {/* Theme Toggle & Call Button - Desktop */}
+          <div className="hidden lg:flex items-center space-x-3">
+            <ThemeToggle />
             <button
               onClick={handleCallClick}
               className="flex items-center px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
@@ -96,11 +98,12 @@ export default function Navigation() {
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="lg:hidden">
+          {/* Theme Toggle & Mobile Menu Button */}
+          <div className="lg:hidden flex items-center space-x-2">
+            <ThemeToggle />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-3 rounded-full hover:bg-blue-50 transition-colors duration-300 text-blue-800"
+              className="p-3 rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors duration-300 text-blue-800 dark:text-blue-200"
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -114,12 +117,12 @@ export default function Navigation() {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="lg:hidden">
-            <div className="px-4 pt-4 pb-6 space-y-2 bg-white/95 backdrop-blur-md rounded-2xl mx-4 mb-4 border border-blue-200">
+            <div className="px-4 pt-4 pb-6 space-y-2 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md rounded-2xl mx-4 mb-4 border border-blue-200 dark:border-blue-700">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  className="block w-full text-left px-4 py-3 rounded-xl hover:bg-blue-50 transition-all duration-300 text-blue-800"
+                  className="block w-full text-left px-4 py-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-300 text-blue-800 dark:text-blue-200"
                   style={{
                     fontSize: '17px',
                     fontWeight: 400,
@@ -131,7 +134,7 @@ export default function Navigation() {
               ))}
               
               {/* Mobile Call Button */}
-              <div className="pt-4 border-t border-blue-200">
+              <div className="pt-4 border-t border-blue-200 dark:border-blue-700">
                 <button
                   onClick={handleCallClick}
                   className="flex items-center justify-center w-full px-6 py-3 text-white rounded-xl font-medium transition-all duration-300 shadow-lg"
