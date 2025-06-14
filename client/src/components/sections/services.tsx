@@ -88,11 +88,7 @@ export default function Services() {
   return (
     <section 
       id="services" 
-      className="py-32 px-6"
-      style={{
-        background: 'rgba(0, 0, 0, 0.05)',
-        backdropFilter: 'blur(10px)'
-      }}
+      className="py-32 px-6 bg-gray-50 dark:bg-gray-800"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -117,7 +113,7 @@ export default function Services() {
             initial={{ width: 0 }}
             animate={inView ? { width: 80 } : { width: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="h-1 bg-white mx-auto rounded-full"
+            className="h-1 bg-blue-500 dark:bg-blue-400 mx-auto rounded-full"
           />
         </motion.div>
 
@@ -134,7 +130,7 @@ export default function Services() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="apple-glass rounded-3xl p-8 text-center group cursor-pointer text-[#1c5c90]"
+                className="apple-glass bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border border-white/20 dark:border-gray-600/50 rounded-3xl p-8 text-center group cursor-pointer text-gray-900 dark:text-gray-100"
                 whileHover={{ 
                   scale: 1.05,
                   y: -12,

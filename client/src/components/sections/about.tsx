@@ -2,7 +2,7 @@ import { Target, Eye, Heart } from "lucide-react";
 
 export default function About() {
   return (
-    <section id="about" className="py-20 px-4">
+    <section id="about" className="py-20 px-4 bg-white dark:bg-gray-900">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 
@@ -16,17 +16,17 @@ export default function About() {
           >
             JSM SANDA - Empresa de Desinfestação em Luanda
           </h2>
-          <div className="w-20 h-1 bg-white mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-blue-500 dark:bg-blue-400 mx-auto rounded-full"></div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <p className="text-lg font-light leading-relaxed opacity-90">
+            <p className="text-lg font-light leading-relaxed opacity-90 text-gray-700 dark:text-gray-300">
               A JSM SANDA é líder em desinfestação profissional em Angola, especializada em 
               controle de pragas, desratização e desinfecção em Luanda e região metropolitana. 
               Atendemos residências, empresas e indústrias com soluções seguras e eficazes.
             </p>
-            <p className="text-lg font-light leading-relaxed opacity-90">
+            <p className="text-lg font-light leading-relaxed opacity-90 text-gray-700 dark:text-gray-300">
               Nossa equipe certificada utiliza equipamentos modernos e produtos aprovados para 
               eliminação de baratas, ratos, cupins, formigas e demais pragas urbanas. Garantimos 
               resultados duradouros com atendimento 24 horas em toda Luanda.
@@ -34,7 +34,7 @@ export default function About() {
             
             {/* Fotos da Equipe e Equipamentos */}
             <div className="grid grid-cols-2 gap-4 mt-8">
-              <div className="glass-effect rounded-xl p-4">
+              <div className="glass-effect rounded-xl p-4 bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm border border-white/20 dark:border-gray-600/50">
                 <div className="aspect-square mb-3" dangerouslySetInnerHTML={{
                   __html: `<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
                     <rect width="300" height="300" fill="#4682B4"/>
@@ -46,7 +46,7 @@ export default function About() {
                     <text x="150" y="295" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Técnico Especializado</text>
                   </svg>`
                 }} />
-                <h4 className="text-sm font-semibold text-center">Equipe Técnica</h4>
+                <h4 className="text-sm font-semibold text-center text-gray-800 dark:text-gray-200">Equipe Técnica</h4>
               </div>
               
               <div className="glass-effect rounded-xl p-4">

@@ -2,7 +2,7 @@ import { MessageSquare, Facebook, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="py-12 px-4 bg-black/20 border-t border-white/10">
+    <footer className="py-12 px-4 bg-gray-900 dark:bg-gray-950 border-t border-gray-700 dark:border-gray-800">
       <div className="max-w-6xl mx-auto">
         <div className="text-center">
           <h3 className="text-2xl font-semibold mb-4">JSM SANDA</h3>
