@@ -10,7 +10,7 @@ export default function Contact() {
   const emails = ["jsmsanda@gmail.com"];
 
   return (
-    <section id="contact" className="py-20 px-4">
+    <section id="contact" className="py-20 px-4 bg-white dark:bg-gray-900">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 
@@ -24,15 +24,15 @@ export default function Contact() {
           >
             Contato JSM SANDA - Desinfestação Luanda 24h
           </h2>
-          <div className="w-20 h-1 bg-white mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-blue-500 dark:bg-blue-400 mx-auto rounded-full"></div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="space-y-8">
-            <div className="p-6 glass-effect rounded-2xl">
+            <div className="p-6 glass-effect bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm border border-white/20 dark:border-gray-600/50 rounded-2xl">
               <div className="flex items-center mb-4">
-                <Phone className="h-8 w-8 mr-4" />
-                <h3 className="text-xl font-semibold">Telefones</h3>
+                <Phone className="h-8 w-8 mr-4 text-blue-600 dark:text-blue-400" />
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">Telefones</h3>
               </div>
               <div className="space-y-2 font-light">
                 {phones.map((phone, index) => (
