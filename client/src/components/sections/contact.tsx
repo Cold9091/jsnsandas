@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Facebook } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
 
 export default function Contact() {
   const phones = [
@@ -98,18 +98,43 @@ export default function Contact() {
             <div className="p-6 glass-effect rounded-2xl">
               <div className="flex items-center mb-4">
                 <Facebook className="h-8 w-8 mr-4" />
-                <h3 className="text-xl font-semibold">Facebook</h3>
+                <h3 className="text-xl font-semibold">Redes Sociais</h3>
               </div>
-              <p className="font-light">
-                <a
-                  href="https://facebook.com/jsmsanda"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white/80 transition-colors duration-200"
-                >
-                  jsmsanda Lda
-                </a>
-              </p>
+              <div className="space-y-3 font-light">
+                <p>
+                  <a
+                    href="https://facebook.com/jsmsanda"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white/80 transition-colors duration-200 flex items-center"
+                  >
+                    <Facebook className="h-5 w-5 mr-2" />
+                    jsmsanda Lda
+                  </a>
+                </p>
+                <p>
+                  <a
+                    href="https://www.instagram.com/jsm_desinfestacao/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white/80 transition-colors duration-200 flex items-center"
+                  >
+                    <Instagram className="h-5 w-5 mr-2" />
+                    @jsm_desinfestacao
+                  </a>
+                </p>
+                <p>
+                  <a
+                    href="https://www.linkedin.com/in/jsm-desinfestação-04673733b/?originalSubdomain=ao"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white/80 transition-colors duration-200 flex items-center"
+                  >
+                    <Linkedin className="h-5 w-5 mr-2" />
+                    JSM Desinfestação
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
 
