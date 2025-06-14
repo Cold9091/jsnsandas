@@ -136,57 +136,7 @@ export default function Hero() {
             </motion.button>
           </motion.div>
 
-          {/* Statistics Section */}
-          <motion.div
-            variants={itemVariants}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mb-16"
-          >
-            {[
-              { number: "500+", label: "Clientes Satisfeitos" },
-              { number: "24h", label: "Atendimento" },
-              { number: "100%", label: "Garantia" },
-              { number: "15+", label: "Anos de Experiência" }
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                variants={cardVariants}
-                className="text-center p-6 bg-white/80 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-white/20 dark:border-gray-600/30"
-                whileHover={{ y: -5, transition: { duration: 0.2 } }}
-              >
-                <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-sm text-gray-600 dark:text-gray-300 font-medium">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
 
-          {/* Trust Indicators */}
-          <motion.div
-            variants={itemVariants}
-            className="flex flex-wrap justify-center items-center gap-4 md:gap-8 max-w-4xl mx-auto"
-          >
-            {[
-              { icon: "🛡️", text: "Produtos Certificados" },
-              { icon: "⚡", text: "Resultados Rápidos" },
-              { icon: "🌱", text: "Eco-friendly" },
-              { icon: "📞", text: "Suporte 24/7" }
-            ].map((feature, index) => (
-              <motion.div
-                key={index}
-                variants={cardVariants}
-                className="flex items-center gap-3 px-4 py-3 bg-white/60 dark:bg-gray-800/40 backdrop-blur-sm rounded-full border border-white/30 dark:border-gray-600/30"
-                whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-              >
-                <span className="text-2xl">{feature.icon}</span>
-                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                  {feature.text}
-                </span>
-              </motion.div>
-            ))}
-          </motion.div>
         </motion.div>
       </div>
     </section>
