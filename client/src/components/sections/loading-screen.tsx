@@ -37,7 +37,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
           transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="fixed inset-0 z-[100] flex items-center justify-center"
           style={{
-            background: 'linear-gradient(135deg, var(--jsn-accent) 0%, var(--jsn-primary) 25%, var(--jsn-primary-light) 50%, var(--jsn-secondary) 75%, var(--jsn-primary-light) 100%)',
+            background: 'linear-gradient(135deg, var(--jsm-dark) 0%, var(--jsm-primary) 25%, var(--jsm-primary-light) 50%, var(--jsm-secondary) 75%, var(--jsm-primary-light) 100%)',
           }}
         >
           <div className="text-center">

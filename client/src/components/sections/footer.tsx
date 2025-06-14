@@ -1,4 +1,4 @@
-import { MessageSquare, Facebook, Mail } from "lucide-react";
+import { MessageSquare, Facebook, Mail, Instagram, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -17,6 +17,22 @@ export default function Footer() {
               className="p-3 glass-effect rounded-full hover:bg-white/20 dark:hover:bg-gray-700/50 transition-all duration-300 transform hover:scale-110 text-white"
             >
               <MessageSquare className="h-6 w-6" />
+            </a>
+            <a
+              href="https://www.instagram.com/jsm_desinfestacao/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 glass-effect rounded-full hover:bg-white/20 dark:hover:bg-gray-700/50 transition-all duration-300 transform hover:scale-110 text-white"
+            >
+              <Instagram className="h-6 w-6" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jsm-desinfestação-04673733b/?originalSubdomain=ao"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 glass-effect rounded-full hover:bg-white/20 dark:hover:bg-gray-700/50 transition-all duration-300 transform hover:scale-110 text-white"
+            >
+              <Linkedin className="h-6 w-6" />
             </a>
             <a
               href="https://facebook.com/jsmsanda"
