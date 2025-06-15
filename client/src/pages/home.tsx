@@ -11,7 +11,7 @@ import Stats from "@/components/sections/stats";
 
 import Gallery from "@/components/sections/gallery";
 
-import FAQ from "@/components/sections/faq";
+
 import Quote from "@/components/sections/quote";
 import Contact from "@/components/sections/contact";
 import Footer from "@/components/sections/footer";
@@ -48,7 +48,7 @@ export default function Home() {
       <Stats />
 
       <Gallery />
-      <FAQ />
+
       <Quote />
       <Contact />
       <Footer />
