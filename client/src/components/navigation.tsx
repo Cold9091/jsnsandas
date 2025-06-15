@@ -24,7 +24,7 @@ export default function Navigation() {
   };
 
   const handleCallClick = () => {
-    window.location.href = "tel:+244932036524";
+    window.location.href = "tel:+244940354740";
   };
 
   const navItems = [
