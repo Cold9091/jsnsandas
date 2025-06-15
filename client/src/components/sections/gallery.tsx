@@ -14,23 +14,24 @@ export default function Gallery() {
   const galleryItems = [
     {
       type: "image",
-      title: "Desinfestação Residencial - Antes",
-      description: "Casa com infestação de baratas em Luanda",
-      category: "Residencial",
-      svg: `<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-        <rect width="400" height="300" fill="#8B4513"/>
-        <rect x="50" y="50" width="300" height="200" fill="#D2691E" stroke="#654321" stroke-width="2"/>
-        <rect x="70" y="80" width="80" height="60" fill="#4169E1" stroke="#000080" stroke-width="1"/>
-        <rect x="250" y="80" width="80" height="60" fill="#4169E1" stroke="#000080" stroke-width="1"/>
-        <rect x="160" y="200" width="80" height="50" fill="#8B4513" stroke="#654321" stroke-width="2"/>
-        <circle cx="200" cy="225" r="3" fill="#FFD700"/>
-        <circle cx="100" cy="180" r="4" fill="#8B4513"/>
-        <circle cx="120" cy="190" r="3" fill="#8B4513"/>
-        <circle cx="110" cy="200" r="4" fill="#8B4513"/>
-        <circle cx="280" cy="170" r="3" fill="#8B4513"/>
-        <circle cx="300" cy="180" r="4" fill="#8B4513"/>
-        <text x="200" y="280" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Infestação Detectada</text>
-      </svg>`
+      title: "Equipe Técnica em Ação",
+      description: "Profissionais da JSM SANDA equipados com EPIs completos",
+      category: "Profissional",
+      image: "/attached_assets/468222082_1139561631065742_7759769024999292054_n_1749958732190.jpg"
+    },
+    {
+      type: "image",
+      title: "Desinfestação em Restaurante",
+      description: "Equipe realizando desinfestação profissional em estabelecimento comercial",
+      category: "Comercial",
+      image: "/attached_assets/474481279_1178157057206199_5459946826216720631_n_1749958748252.jpg"
+    },
+    {
+      type: "image",
+      title: "Tratamento de Cozinha Industrial",
+      description: "Desinfestação especializada em cozinha industrial",
+      category: "Industrial",
+      image: "/attached_assets/474464151_1178157053872866_7117392131971112148_n_1749958760903.jpg"
     },
     {
       type: "image", 
@@ -134,7 +135,7 @@ export default function Gallery() {
     }
   ];
 
-  const categories = ["Todos", "Residencial", "Comercial", "Hospitalar", "Processo"];
+  const categories = ["Todos", "Profissional", "Comercial", "Industrial", "Residencial", "Hospitalar", "Processo"];
   const [activeCategory, setActiveCategory] = useState("Todos");
 
   const filteredItems = activeCategory === "Todos" 
@@ -251,7 +252,7 @@ export default function Gallery() {
             >
               {/* Media Container */}
               <div className="relative aspect-[4/3] bg-gradient-to-br from-white/10 to-white/5 overflow-hidden">
-                {/* Actual SVG Content */}
+                {/* Media Content - Real Images or SVG */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   {item.type === "video" ? (
                     <motion.div
@@ -260,6 +261,13 @@ export default function Gallery() {
                     >
                       <Play className="h-8 w-8 ml-1" />
                     </motion.div>
+                  ) : item.image ? (
+                    <img 
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
                   ) : (
                     <div 
                       className="w-full h-full flex items-center justify-center"
@@ -330,9 +338,15 @@ export default function Gallery() {
               </button>
               
               <div className="apple-glass rounded-3xl p-8">
-                <div className="aspect-video bg-gradient-to-br from-white/10 to-white/5 rounded-2xl flex items-center justify-center mb-6">
+                <div className="aspect-video bg-gradient-to-br from-white/10 to-white/5 rounded-2xl overflow-hidden flex items-center justify-center mb-6">
                   {filteredItems[selectedMedia]?.type === "video" ? (
                     <span className="text-8xl opacity-20">🎥</span>
+                  ) : filteredItems[selectedMedia]?.image ? (
+                    <img 
+                      src={filteredItems[selectedMedia].image}
+                      alt={filteredItems[selectedMedia]?.title}
+                      className="w-full h-full object-cover"
+                    />
                   ) : (
                     <div 
                       className="w-full h-full flex items-center justify-center"
