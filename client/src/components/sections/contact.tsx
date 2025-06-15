@@ -39,8 +39,9 @@ export default function Contact() {
                       href={`tel:${phone.replace(/\s/g, "")}`}
                       className="hover:text-white/80 transition-colors duration-200"
                       onClick={() => {
-                        if (typeof window !== 'undefined' && window.gtag) {
-                          window.gtag('event', 'phone_call', {
+                        // Track phone call event if analytics is available
+                        if (typeof window !== 'undefined' && (window as any).gtag) {
+                          (window as any).gtag('event', 'phone_call', {
                             event_category: 'contact',
                             event_label: phone,
                             value: 1
@@ -74,23 +75,33 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="p-6 glass-effect rounded-2xl">
+            <div className="p-6 glass-effect bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm border border-white/20 dark:border-gray-600/50 rounded-2xl">
               <div className="flex items-center mb-4">
-                <MapPin className="h-8 w-8 mr-4" />
-                <h3 className="text-xl font-semibold">Endereço</h3>
+                <MapPin className="h-8 w-8 mr-4 text-blue-600 dark:text-blue-400" />
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">Endereço</h3>
               </div>
-              <p className="font-light">
-                Prédio 6, Coqueiros – Ingombota
-                <br />
-                Luanda – Angola
-                <br />
-                <span className="text-sm opacity-75 mt-2 block">
-                  📍 Atendemos: Ingombota, Maianga, Rangel, Talatona, Kilamba
-                </span>
-                <span className="text-sm opacity-75">
-                  ⏰ Funcionamento: 24 horas por dia, 7 dias por semana
-                </span>
-              </p>
+              <div className="space-y-3 font-light text-gray-700 dark:text-gray-300">
+                <p>
+                  <strong>Sede Principal:</strong><br />
+                  Prédio 6, Coqueiros – Ingombota<br />
+                  Luanda – Angola
+                </p>
+                <button
+                  onClick={() => window.open("https://maps.app.goo.gl/nSht7bQujxWbc4DVA", "_blank")}
+                  className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200 text-sm"
+                >
+                  <MapPin className="h-4 w-4 mr-1" />
+                  Ver localização exata
+                </button>
+                <div className="pt-2 border-t border-white/20 dark:border-gray-600/50">
+                  <p className="text-sm opacity-75 mb-1">
+                    📍 <strong>Áreas de Atendimento:</strong> Ingombota, Maianga, Rangel, Talatona, Kilamba
+                  </p>
+                  <p className="text-sm opacity-75">
+                    ⏰ <strong>Funcionamento:</strong> 24 horas por dia, 7 dias por semana
+                  </p>
+                </div>
+              </div>
             </div>
 
             <div className="p-6 glass-effect rounded-2xl">
@@ -136,28 +147,44 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Map placeholder */}
+          {/* Google Maps */}
           <div className="glass-effect rounded-2xl p-6">
-            <h3 className="text-xl font-semibold mb-4">Localização</h3>
-            <div className="h-80 bg-white/10 rounded-xl flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="h-16 w-16 mx-auto mb-4 opacity-60" />
-                <p className="font-light opacity-90">Mapa do Google Maps</p>
-                <p className="text-sm font-light opacity-70 mt-2">
-                  Prédio 6, Coqueiros – Ingombota, Luanda
-                </p>
-                <button
-                  onClick={() =>
-                    window.open(
-                      "https://maps.google.com/maps?q=Coqueiros,+Ingombota,+Luanda,+Angola",
-                      "_blank"
-                    )
-                  }
-                  className="mt-4 px-4 py-2 glass-effect rounded-lg hover:bg-white/20 transition-all duration-300"
-                >
-                  Ver no Google Maps
-                </button>
+            <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">Nossa Localização</h3>
+            <div className="h-80 rounded-xl overflow-hidden mb-4 bg-gray-100 dark:bg-gray-800">
+              <iframe
+                src="https://maps.google.com/maps?q=Prédio+6,+Coqueiros,+Ingombota,+Luanda,+Angola&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="JSM SANDA - Prédio 6, Coqueiros, Ingombota, Luanda"
+              ></iframe>
+            </div>
+            <div className="space-y-3">
+              <div className="flex items-start">
+                <MapPin className="h-5 w-5 mr-3 mt-0.5 text-blue-600 dark:text-blue-400 flex-shrink-0" />
+                <div>
+                  <p className="font-medium text-gray-900 dark:text-gray-100">Endereço:</p>
+                  <p className="font-light text-gray-700 dark:text-gray-300">
+                    Prédio 6, Coqueiros – Ingombota<br />
+                    Luanda – Angola
+                  </p>
+                </div>
               </div>
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://maps.app.goo.gl/nSht7bQujxWbc4DVA",
+                    "_blank"
+                  )
+                }
+                className="w-full mt-4 px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all duration-300 flex items-center justify-center"
+              >
+                <MapPin className="h-4 w-4 mr-2" />
+                Abrir no Google Maps
+              </button>
             </div>
           </div>
         </div>
