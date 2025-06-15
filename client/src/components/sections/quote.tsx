@@ -81,7 +81,12 @@ export default function Quote() {
   });
 
   const onSubmit = (data: FormData) => {
+    // Send to database
     submitQuote.mutate(data);
+    
+    // Send to WhatsApp
+    const whatsappMessage = `*Novo Orçamento JSM SANDA*%0A%0A*Nome:* ${data.name}%0A*Telefone:* ${data.phone}%0A*Email:* ${data.email}%0A*Serviço:* ${data.service}%0A*Localização:* ${data.location}%0A*Mensagem:* ${data.message}`;
+    window.open(`https://wa.me/244940354740?text=${whatsappMessage}`, "_blank");
   };
 
   const services = [
