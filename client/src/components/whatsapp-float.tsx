@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function WhatsAppFloat() {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/244939103175", "_blank", "noopener noreferrer");
+    window.open("https://wa.me/244940354740", "_blank", "noopener noreferrer");
   };
 
   return (

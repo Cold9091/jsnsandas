@@ -11,7 +11,7 @@ export default function Footer() {
           </p>
           <div className="flex justify-center space-x-6 mb-8">
             <a
-              href="https://wa.me/244939103175"
+              href="https://wa.me/244940354740"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 glass-effect rounded-full hover:bg-white/20 dark:hover:bg-gray-700/50 transition-all duration-300 transform hover:scale-110 text-white"

@@ -77,7 +77,7 @@ export default function BreadcrumbsSchema() {
         {
           "@type": "HowToStep",
           "name": "Entre em Contato",
-          "text": "Ligue para +244 939 103 175 ou envie WhatsApp para solicitar orçamento gratuito",
+          "text": "Ligue para +244 940 354 740 ou envie WhatsApp para solicitar orçamento gratuito",
           "image": "https://jsnsanda.com/images/passo-1-contato.jpg"
         },
         {

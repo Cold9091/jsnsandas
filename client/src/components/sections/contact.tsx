@@ -2,9 +2,7 @@ import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react
 
 export default function Contact() {
   const phones = [
-    "+244 932 036 524",
     "+244 940 354 740",
-    "222 030 955",
   ];
 
   const emails = ["jsmsanda@gmail.com"];

@@ -381,7 +381,7 @@ export default function Quote() {
                   </motion.button>
                   <motion.button
                     type="button"
-                    onClick={() => window.open("https://wa.me/244939103175", "_blank")}
+                    onClick={() => window.open("https://wa.me/244940354740", "_blank")}
                     className="apple-button-blue flex items-center justify-center"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
