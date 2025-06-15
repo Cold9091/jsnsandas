@@ -1,7 +1,7 @@
 {
   "version": 2,
   "buildCommand": "vite build",
-  "outputDirectory": "client/dist",
+  "outputDirectory": "dist/public",
   "functions": {
     "api/*.ts": {
       "runtime": "nodejs18.x"
