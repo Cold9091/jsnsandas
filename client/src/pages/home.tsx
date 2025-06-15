@@ -8,7 +8,7 @@ import Products from "@/components/sections/products";
 import Process from "@/components/sections/process";
 import Areas from "@/components/sections/areas";
 import Stats from "@/components/sections/stats";
-import Testimonials from "@/components/sections/testimonials";
+
 import Gallery from "@/components/sections/gallery";
 
 import FAQ from "@/components/sections/faq";
@@ -46,7 +46,7 @@ export default function Home() {
       <Process />
       <Areas />
       <Stats />
-      <Testimonials />
+
       <Gallery />
       <FAQ />
       <Quote />
