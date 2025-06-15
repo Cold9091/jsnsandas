@@ -6,7 +6,7 @@ export default function Contact() {
     "222 030955",
   ];
 
-  const emails = ["jsmsanda@gmail.com"];
+  const emails = ["jortikisandas@gmail.com"];
 
   return (
     <section id="contact" className="py-20 px-4 bg-white dark:bg-gray-900">
