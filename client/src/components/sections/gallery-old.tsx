@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useState } from "react";
-import { X } from "lucide-react";
+import { ChevronLeft, ChevronRight, X, Play } from "lucide-react";
 
 export default function Gallery() {
   const [ref, inView] = useInView({
@@ -53,10 +53,91 @@ export default function Gallery() {
       description: "Desinfestação especializada em ambiente industrial",
       category: "Industrial",
       image: "/attached_assets/474464151_1178157053872866_7117392131971112148_n_1749958760903.jpg"
+    },
+    {
+      type: "image",
+      title: "Controle de Roedores - Restaurante",
+      description: "Tratamento profissional em estabelecimento comercial",
+      category: "Comercial",
+      svg: `<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+        <rect width="400" height="300" fill="#2F4F4F"/>
+        <rect x="30" y="50" width="340" height="200" fill="#F5F5DC" stroke="#D3D3D3" stroke-width="2"/>
+        <rect x="50" y="80" width="60" height="80" fill="#C0C0C0" stroke="#808080" stroke-width="1"/>
+        <rect x="150" y="80" width="60" height="80" fill="#C0C0C0" stroke="#808080" stroke-width="1"/>
+        <rect x="250" y="80" width="60" height="80" fill="#C0C0C0" stroke="#808080" stroke-width="1"/>
+        <rect x="60" y="180" width="40" height="40" fill="#FF6347" stroke="#DC143C" stroke-width="1"/>
+        <rect x="160" y="180" width="40" height="40" fill="#FF6347" stroke="#DC143C" stroke-width="1"/>
+        <rect x="260" y="180" width="40" height="40" fill="#FF6347" stroke="#DC143C" stroke-width="1"/>
+        <rect x="320" y="100" width="30" height="120" fill="#32CD32" stroke="#228B22" stroke-width="2"/>
+        <text x="335" y="95" text-anchor="middle" fill="white" font-size="10" font-weight="bold">CONTROLE</text>
+        <text x="200" y="280" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Cozinha Protegida</text>
+      </svg>`
+    },
+    {
+      type: "image",
+      title: "Processo de Fumigação",
+      description: "Demonstração da técnica de fumigação segura",
+      category: "Processo",
+      svg: `<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+        <rect width="400" height="300" fill="#4682B4"/>
+        <rect x="50" y="100" width="300" height="150" fill="#D3D3D3" stroke="#A9A9A9" stroke-width="2"/>
+        <rect x="100" y="150" width="200" height="80" fill="#F0F0F0" stroke="#C0C0C0" stroke-width="1"/>
+        <circle cx="150" cy="50" r="20" fill="#FFD700"/>
+        <circle cx="250" cy="50" r="20" fill="#FFD700"/>
+        <path d="M150 70 Q200 90 250 70" stroke="#90EE90" stroke-width="3" fill="none"/>
+        <circle cx="170" cy="80" r="3" fill="#90EE90" opacity="0.7"/>
+        <circle cx="190" cy="85" r="4" fill="#90EE90" opacity="0.6"/>
+        <circle cx="210" cy="82" r="3" fill="#90EE90" opacity="0.8"/>
+        <circle cx="230" cy="78" r="4" fill="#90EE90" opacity="0.5"/>
+        <rect x="180" y="200" width="40" height="30" fill="#8B4513" stroke="#654321" stroke-width="1"/>
+        <text x="200" y="280" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Fumigação Ativa</text>
+      </svg>`
+    },
+    {
+      type: "image",
+      title: "Desinfecção Hospitalar",
+      description: "Desinfecção profissional em ambiente hospitalar", 
+      category: "Hospitalar",
+      svg: `<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+        <rect width="400" height="300" fill="#F0F8FF"/>
+        <rect x="50" y="50" width="300" height="200" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="2"/>
+        <rect x="80" y="100" width="60" height="100" fill="#F5F5F5" stroke="#D3D3D3" stroke-width="1"/>
+        <rect x="180" y="100" width="60" height="100" fill="#F5F5F5" stroke="#D3D3D3" stroke-width="1"/>
+        <rect x="280" y="100" width="50" height="100" fill="#F5F5F5" stroke="#D3D3D3" stroke-width="1"/>
+        <rect x="70" y="80" width="80" height="15" fill="#00CED1" stroke="#008B8B" stroke-width="1"/>
+        <rect x="170" y="80" width="80" height="15" fill="#00CED1" stroke="#008B8B" stroke-width="1"/>
+        <rect x="270" y="80" width="60" height="15" fill="#00CED1" stroke="#008B8B" stroke-width="1"/>
+        <circle cx="200" cy="230" r="15" fill="#FF6347"/>
+        <path d="M193 230 L200 237 L207 223" stroke="white" stroke-width="2" fill="none"/>
+        <text x="200" y="280" text-anchor="middle" fill="#333" font-size="12" font-weight="bold">Ambiente Esterilizado</text>
+      </svg>`
+    },
+    {
+      type: "image",
+      title: "Tratamento de Cupins",
+      description: "Eliminação de cupins em estrutura de madeira",
+      category: "Residencial",
+      svg: `<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+        <rect width="400" height="300" fill="#8FBC8F"/>
+        <rect x="50" y="150" width="300" height="100" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+        <rect x="80" y="120" width="20" height="130" fill="#D2691E" stroke="#A0522D" stroke-width="1"/>
+        <rect x="120" y="120" width="20" height="130" fill="#D2691E" stroke="#A0522D" stroke-width="1"/>
+        <rect x="160" y="120" width="20" height="130" fill="#D2691E" stroke="#A0522D" stroke-width="1"/>
+        <rect x="200" y="120" width="20" height="130" fill="#D2691E" stroke="#A0522D" stroke-width="1"/>
+        <rect x="240" y="120" width="20" height="130" fill="#D2691E" stroke="#A0522D" stroke-width="1"/>
+        <rect x="280" y="120" width="20" height="130" fill="#D2691E" stroke="#A0522D" stroke-width="1"/>
+        <rect x="320" y="120" width="20" height="130" fill="#D2691E" stroke="#A0522D" stroke-width="1"/>
+        <circle cx="90" cy="180" r="2" fill="#8B4513"/>
+        <circle cx="130" cy="190" r="2" fill="#8B4513"/>
+        <circle cx="170" cy="185" r="2" fill="#8B4513"/>
+        <rect x="150" y="80" width="100" height="30" fill="#32CD32" stroke="#228B22" stroke-width="2"/>
+        <text x="200" y="100" text-anchor="middle" fill="white" font-size="10" font-weight="bold">TRATAMENTO APLICADO</text>
+        <text x="200" y="280" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Madeira Protegida</text>
+      </svg>`
     }
   ];
 
-  const categories = ["Todos", "Profissional", "Comercial", "Industrial", "Residencial"];
+  const categories = ["Todos", "Profissional", "Comercial", "Industrial", "Residencial", "Hospitalar", "Processo"];
   const [activeCategory, setActiveCategory] = useState("Todos");
 
   const filteredItems = activeCategory === "Todos" 
@@ -173,12 +254,29 @@ export default function Gallery() {
             >
               {/* Media Container */}
               <div className="relative aspect-[4/3] bg-gradient-to-br from-white/10 to-white/5 overflow-hidden">
-                <img 
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
+                {/* Media Content - Real Images or SVG */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  {item.type === "video" ? (
+                    <motion.div
+                      className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center"
+                      whileHover={{ scale: 1.1 }}
+                    >
+                      <Play className="h-8 w-8 ml-1" />
+                    </motion.div>
+                  ) : item.image ? (
+                    <img 
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div 
+                      className="w-full h-full flex items-center justify-center"
+                      dangerouslySetInnerHTML={{ __html: item.svg || '' }}
+                    />
+                  )}
+                </div>
                 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
@@ -194,9 +292,9 @@ export default function Gallery() {
               {/* Content */}
               <div className="p-6">
                 <h3 
-                  className="text-xl font-semibold mb-3"
+                  className="text-lg font-semibold mb-2"
                   style={{
-                    fontSize: '20px',
+                    fontSize: '19px',
                     fontWeight: 600,
                     letterSpacing: '-0.022em'
                   }}
@@ -204,11 +302,11 @@ export default function Gallery() {
                   {item.title}
                 </h3>
                 <p 
-                  className="opacity-80"
+                  className="apple-body opacity-80"
                   style={{
                     fontSize: '15px',
                     lineHeight: 1.5,
-                    letterSpacing: '-0.016em'
+                    letterSpacing: '-0.022em'
                   }}
                 >
                   {item.description}
@@ -243,11 +341,20 @@ export default function Gallery() {
               
               <div className="apple-glass rounded-3xl p-8">
                 <div className="aspect-video bg-gradient-to-br from-white/10 to-white/5 rounded-2xl overflow-hidden flex items-center justify-center mb-6">
-                  <img 
-                    src={filteredItems[selectedMedia]?.image}
-                    alt={filteredItems[selectedMedia]?.title}
-                    className="w-full h-full object-cover"
-                  />
+                  {filteredItems[selectedMedia]?.type === "video" ? (
+                    <span className="text-8xl opacity-20">🎥</span>
+                  ) : filteredItems[selectedMedia]?.image ? (
+                    <img 
+                      src={filteredItems[selectedMedia].image}
+                      alt={filteredItems[selectedMedia]?.title}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div 
+                      className="w-full h-full flex items-center justify-center"
+                      dangerouslySetInnerHTML={{ __html: filteredItems[selectedMedia]?.svg || '' }}
+                    />
+                  )}
                 </div>
                 
                 <h3 
@@ -279,23 +386,39 @@ export default function Gallery() {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
-          className="text-center mt-16"
+          transition={{ delay: 1, duration: 0.8 }}
+          className="text-center mt-20"
         >
-          <motion.a
-            href="#quote"
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-full text-white font-semibold transition-all duration-300 hover:scale-105"
-            style={{
-              background: 'linear-gradient(135deg, var(--jsm-blue), var(--jsm-blue-dark))',
-              fontSize: '17px',
-              fontWeight: 600,
-              letterSpacing: '-0.022em'
-            }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Solicitar Orçamento
-          </motion.a>
+          <div className="apple-glass rounded-3xl p-8 max-w-2xl mx-auto">
+            <h3 
+              className="text-2xl font-semibold mb-4"
+              style={{
+                fontSize: '28px',
+                fontWeight: 600,
+                letterSpacing: '-0.022em'
+              }}
+            >
+              Pronto para ver resultados assim?
+            </h3>
+            <p 
+              className="apple-body mb-8"
+              style={{
+                fontSize: '19px',
+                lineHeight: 1.42,
+                letterSpacing: '-0.022em'
+              }}
+            >
+              Entre em contacto connosco e receba uma avaliação gratuita do seu caso
+            </p>
+            <motion.button
+              onClick={() => window.open("https://wa.me/244939103175", "_blank")}
+              className="apple-button-primary apple-button-enhanced"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Solicitar Avaliação Gratuita
+            </motion.button>
+          </div>
         </motion.div>
       </div>
     </section>
