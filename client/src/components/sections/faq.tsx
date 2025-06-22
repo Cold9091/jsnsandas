@@ -18,7 +18,7 @@ export default function FAQ() {
     },
     {
       question: "Quanto custa desinfestação em Angola?",
-      answer: "O preço da desinfestação em Angola varia conforme o tipo de praga e tamanho da área. A JSM SANDA oferece orçamento gratuito em Luanda. Entre em contato pelo +244 939 103 175 para avaliação sem custo."
+      answer: "O preço da desinfestação em Angola varia conforme o tipo de praga e tamanho da área. A JSM SANDA oferece orçamento gratuito em Luanda. Entre em contacto pelo +244 939 103 175 para avaliação sem custo."
     },
     {
       question: "Como eliminar baratas em Luanda definitivamente?",

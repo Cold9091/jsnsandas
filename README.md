@@ -24,7 +24,7 @@ Website profissional e responsivo para JSM SANDA, empresa de desinfestação em 
 ### Funcionalidades
 
 - ✅ Design responsivo e moderno
-- ✅ Seções: Hero, Sobre, Serviços, Produtos, Áreas, Galeria, Processo, FAQ, Depoimentos, Contato
+- ✅ Seções: Hero, Sobre, Serviços, Produtos, Áreas, Galeria, Processo, FAQ, Depoimentos, Contacto
 - ✅ Formulário de orçamento com integração WhatsApp
 - ✅ Botão flutuante WhatsApp
 - ✅ Google Maps integrado
@@ -33,7 +33,7 @@ Website profissional e responsivo para JSM SANDA, empresa de desinfestação em 
 - ✅ SEO otimizado
 - ✅ API para orçamentos
 
-### Contatos Configurados
+### Contactos Configurados
 
 - **Telefone Principal**: +244 940 354 740
 - **Telefone Fixo**: 222 030955
@@ -85,10 +85,10 @@ npm run check
 ### Integração WhatsApp
 - Botão flutuante sempre visível
 - Formulário de orçamento envia dados diretamente para WhatsApp
-- Botões de contato redirecionam para WhatsApp
+- Botões de contacto redirecionam para WhatsApp
 
 ### Google Maps
-- Mapa interativo na seção de contato
+- Mapa interativo na seção de contacto
 - Localização exata da empresa
 - Botão para abrir no Google Maps
 

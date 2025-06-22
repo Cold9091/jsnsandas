@@ -39,7 +39,7 @@ export default function BreadcrumbsSchema() {
         {
           "@type": "ListItem",
           "position": 6,
-          "name": "Contato",
+          "name": "Contacto",
           "item": "https://jsmsanda.com/#contact"
         }
       ]
@@ -76,9 +76,9 @@ export default function BreadcrumbsSchema() {
       "step": [
         {
           "@type": "HowToStep",
-          "name": "Entre em Contato",
+          "name": "Entre em Contacto",
           "text": "Ligue para +244 940 354 740 ou envie WhatsApp para solicitar orçamento gratuito",
-          "image": "https://jsnsanda.com/images/passo-1-contato.jpg"
+          "image": "https://jsnsanda.com/images/passo-1-contacto.jpg"
         },
         {
           "@type": "HowToStep",

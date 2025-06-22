@@ -21,7 +21,7 @@ export default function Contact() {
               backgroundClip: 'text'
             }}
           >
-            Contato JSM SANDA - Desinfestação Luanda 24h
+            Contacto JSM SANDA - Desinfestação Luanda 24h
           </h2>
           <div className="w-20 h-1 bg-blue-500 dark:bg-blue-400 mx-auto rounded-full"></div>
         </div>
